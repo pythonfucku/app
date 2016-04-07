@@ -23,3 +23,5 @@ app = AttribDict()
 logger = LOGGER   
 
 conf = AttribDict()
+
+matches = AttribDict()
