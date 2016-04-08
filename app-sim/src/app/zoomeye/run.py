@@ -23,6 +23,8 @@ from init import initZoomeye
 from init import initSearchHostResult
 
 from setResut import setSearchResult
+
+from MetInfo import attack
  
 def init():
 	paths.APP_ROOT_PATH = os.path.abspath(os.path.dirname(__file__)) 
@@ -95,7 +97,7 @@ def apiSearch():
 
 			#TEST
 			for x in r_decoded['matches']:
-				logger.info(x['ip'])
+				logger.info("find ip:" + x['ip'])
 				conf.ip_list.append(x['ip'])
 
 	except Exception,e:
@@ -158,8 +160,14 @@ def setSearchStr():
 def main():
 	init()
 	login()
-	apiSearch()
+	try:
+		apiSearch()
+	except:
+		pass
 	saveListToFile(paths.APP_RESULT_FILE,conf.ip_list)
+
+	for ip in conf.ip_list:
+		attack(ip)
  
 if __name__ == '__main__':
 	main()
