@@ -17,6 +17,7 @@ python main.py -u yourname -p yourpasswd --type host --query cms --facets os,app
   main.py还能做哪些事？You can you up,can you?  :)
 -----------------------------------------------------------------------------------------------------
 changeLog
+
   2016-04-05 23时30分50秒 目前只打印了搜索到的ip，其他信息没有打印，没有保存。
     后续将所有搜索到的信息进一步保存，并加载其他测试模块
     
