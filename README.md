@@ -19,12 +19,18 @@ python main.py -u yourname -p yourpasswd --type host --query cms --facets os,app
 changeLog
   2016-04-05 23时30分50秒 目前只打印了搜索到的ip，其他信息没有打印，没有保存。
     后续将所有搜索到的信息进一步保存，并加载其他测试模块
+    
   2016年4月8日 17:10:07 结合zoomeye api 和seebug的poc。
     增加了基《于MetInfo5.3 最新版本SQL注射》的自动化sql注入小例子，出处http://www.wooyun.org/bugs/wooyun-2015-0119166
+    
     Poc是从网上抄的，出处：http://blog.evalbug.com/2016/01/27/poc_coding_3/
+    
     说明：利用zoomeye api查询MetInfo，将结果输入到poc中，进行注入测试。目前还不能动态加载模块，只是写死，后续优化
+    
       python main.py  --type host --page 10 --query MetInfo   (省略用户名和密码）
+      
       结果，手动验证好用：
+      
       20160408170340,23985,INFO > find ip:60.251.212.90
       20160408170340,23985,INFO > find ip:42.96.165.119
       20160408170340,23985,INFO > find ip:42.120.9.203
