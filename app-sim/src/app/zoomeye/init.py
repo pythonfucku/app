@@ -60,7 +60,6 @@ def initZoomeye():
 	]
 
 def initSearchHostResult():
-	print "initSearchHostResult"
 	conf.zoomeye.hostResult = AttribDict()	
 
 	#conf.zoomeye.hostResult.ip = None
@@ -70,8 +69,9 @@ def initSearchHostResult():
 	conf.zoomeye.hostResult.geoinfo.asn = None
 
 	conf.zoomeye.hostResult.geoinfo.city = AttribDict()
-	conf.zoomeye.hostResult.geoinfo.city.en = None
-	conf.zoomeye.hostResult.geoinfo.city.zh = None
+	conf.zoomeye.hostResult.geoinfo.city.names = AttribDict()	
+	conf.zoomeye.hostResult.geoinfo.city.names.en = None
+	conf.zoomeye.hostResult.geoinfo.city.names.zh = None
 
 	conf.zoomeye.hostResult.geoinfo.continent = AttribDict()
 	conf.zoomeye.hostResult.geoinfo.continent.code =None

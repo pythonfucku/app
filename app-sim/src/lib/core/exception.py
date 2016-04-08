@@ -19,8 +19,7 @@ class AppLoadException(AppBaseException):
 class ZoomeyeBaseException(Exception):
 	pass
 
-class ZoomeyeAccessKeyException(ZoomeyeBaseException):
-	pass
 
 class ZoomeyeSearchException(ZoomeyeBaseException):
 	pass
+

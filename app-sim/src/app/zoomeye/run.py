@@ -14,7 +14,6 @@ from lib.core.data import conf
 from lib.core.data import logger
 from lib.core.data import paths
 
-from lib.core.exception import ZoomeyeAccessKeyException
 from lib.core.exception import ZoomeyeSearchException
 
 from lib.core.common import checkFile
@@ -33,7 +32,10 @@ def init():
 	initConf()
 	initZoomeye()
 
-	#if or not init here
+	'''
+	if or not init here
+	no use
+	'''
 	#initSearchHostResult()
 
 def login():
@@ -50,53 +52,57 @@ def login():
 		try:
 			r = requests.post(url = conf.zoomeye.login,data = data_encoded)
 			r_decoded = json.loads(r.text)
-			conf.zoomeye.key = r_decoded['access_token']
-			saveStrToFile(paths.APP_KEY_FILE,conf.zoomeye.key)
-		except Exception,e:
-			errMessage = "username or password is wrong\n"
-			errMessage +=str(e)
-			logger.error(errMessage)
-			raise ZoomeyeBaseException(errMessage)
-
-	else:
-		if not os.path.isfile(paths.APP_KEY_FILE):
-			errMessage = "access_key is empty"
-			logger.error(errMessage)
-			raise ZoomeyeAccessKeyException(errMessage)
-		else:
-			try:
-				getKeyFromFile()
+			if r_decoded.has_key("access_token"):
+				conf.zoomeye.key = r_decoded['access_token']
+				saveStrToFile(paths.APP_KEY_FILE,conf.zoomeye.key)
 				return
-			except Exception ,e:
-				errMessage = "get access_key error"
-				errMessage += str(e)
-				raise ZoomeyeAccessKeyException(errMessage)
- 
-def apiTest():
-	if not conf.zoomeye.key:
-		with open(paths.APP_KEY_FILE,'r') as input:
-			conf.zoomeye.key = input.read()
+			else:
+				errMessage = r_decoded["message"]
+				logger.error(errMessage)
+				setLoginStr()
+				login()
+		except Exception,e:
+			errMessage = "loggin error.\n"
+			errMessage += str(e)
+			errMessage += "\nPlease try it again"
+			logger.error(errMessage)
+			setLoginStr()
+			login()
+	else:
+		try:
+			getKeyFromFile()
+			return
+		except:
+			logger.info("zoomeye api key is emprty,please login")
+			setLoginStr()
+			login()
 
+def setLoginStr():
+	conf.user = raw_input('[-] input : user:')
+	conf.passwd = raw_input('[-] input : password :')
+
+def apiSearch():
 	headers = {
 		'Authorization' : 'JWT ' + conf.zoomeye.key,
 	}
 
 	try:
-		r = requests.get(setSearchStr(),headers = headers)
-		#TODO
-		r_decoded = json.loads(r.text)
-		setSearchOutput(r_decoded)
-		#for x in r_decoded['matches']:
-		#	logger.info(x['ip'])
-		#	conf.ip_list.append(x['ip'])
-		#logger.info('[-] info : count ' + str(page * 10))
+		count = int(conf.zoomeye.page)
+		for i in range(count):
+			conf.zoomeye.page = i
+			r = requests.get(setSearchStr(),headers = headers)
+			r_decoded = json.loads(r.text)
+
+			#TEST
+			for x in r_decoded['matches']:
+				logger.info(x['ip'])
+				conf.ip_list.append(x['ip'])
 
 	except Exception,e:
-		#if str(e.message) == 'matches':
-		#	logger.info('[-] info : account was break, excceeding the max limitations')
-		#	break
-		#else:
-		#	logger.info('[-] info : ' + str(e.message))
+		if str(e.message) == 'matches':
+			logger.info("account was break, excceeding the max limitations")
+		else:
+			logger.info( str(e.message))
 
 		errMessage = str(e)
 		logger.error(errMessage)
@@ -147,27 +153,12 @@ def setSearchStr():
 
 	return ("%s?query=\"%s\"&facet=%s&page=%d") % (conf.zoomeye.url,conf.zoomeye.query,conf.zoomeye.facets,conf.zoomeye.page)
 
-def setSearchOutput(obj):
-	setSearchResult(obj)
-	"""
-	for x in obj['matches']:
-		for mk in x.keys():
-			#print mk
-			if mk == "geoinfo":
-				#print x["geoinfo"]
-				matches.geoinfo = x["geoinfo"]
-				#print matches.geoinfo
-			
-		break
-		print matches.geoinfo
-	"""
 
  
 def main():
 	init()
 	login()
- 
-	apiTest()
+	apiSearch()
 	saveListToFile(paths.APP_RESULT_FILE,conf.ip_list)
  
 if __name__ == '__main__':

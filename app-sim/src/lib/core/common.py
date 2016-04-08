@@ -27,13 +27,11 @@ def checkFile(filename):
 
 	if filename is None or not os.path.isfile(filename):
 		valid = False
-
 	if valid:
 		try:
 			with open(filename, "rb"):
 				pass
 		except:
 			valid = False
-
 	if not valid:
 		raise AppBaseException("unable to read file '%s'" % filename)
