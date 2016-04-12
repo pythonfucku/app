@@ -27,8 +27,9 @@ python main.py zoomeye -u yourname -p yourpasswd --type host --query cms --facet
     下一步优化：1.保存文件；2.动态加载攻击模块；main.py框架对进程的管理。
     
     
-  2016年4月8日 17:10:07 结合zoomeye api 和seebug的poc。
+  2016年4月8日 17:10:07 
   
+    结合zoomeye api 和seebug的poc。
     增加了基《于MetInfo5.3 最新版本SQL注射》的自动化sql注入小例子，出处http://www.wooyun.org/bugs/wooyun-2015-0119166
     Poc是从网上抄的，出处：http://blog.evalbug.com/2016/01/27/poc_coding_3/
     说明：利用zoomeye api查询MetInfo，将结果输入到poc中，进行注入测试。目前还不能动态加载模块，只是写死，后续优化
