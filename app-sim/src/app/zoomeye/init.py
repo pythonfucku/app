@@ -4,13 +4,14 @@
 import sys
 sys.path.append("../../")
 
-from optparse import OptionParser
 
 from lib.core.datatype import AttribDict
 from lib.core.data import conf
+from optparse import OptionParser
 
 def initConf():
 	parser = OptionParser()
+
 	parser.add_option("-u",dest="user",help="")
 	parser.add_option("-p",dest="passwd",help="")
 	parser.add_option("--type",dest="type",help="")
@@ -21,12 +22,10 @@ def initConf():
 	(options, args) = parser.parse_args()  
 																																	 
 
-	conf.user = options.user
-	conf.passwd = options.passwd
-	conf.ip_list = []  
-
 	conf.zoomeye = AttribDict()
-
+	conf.zoomeye.user = options.user
+	conf.zoomeye.passwd = options.passwd
+	conf.zoomeye.ip_list = []  
 	conf.zoomeye.type = options.type
 	conf.zoomeye.query = options.query
 	conf.zoomeye.facets = options.facets
@@ -60,6 +59,9 @@ def initZoomeye():
 	]
 
 def initSearchHostResult():
+	"""
+	no use
+	"""
 	conf.zoomeye.hostResult = AttribDict()	
 
 	#conf.zoomeye.hostResult.ip = None

