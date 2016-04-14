@@ -21,6 +21,14 @@ python main.py zoomeye -u yourname -p yourpasswd --type host --query cms --facet
 -----------------------------------------------------------------------------------------------------
 # changeLog
 
+  2016年4月14日 17:26:24
+  
+    更新：
+    1.将zoomeye api搜索到的结果保存在同级的output.txt中
+    2.命令行增加了--attack命令，可动态加载攻击模块。实例中的MetInfo，即使用api返回的结果，实时攻击测试
+    python main.py zoomeye --type host --page 1  --query MetInfo --attack MetInfo
+    
+
   2016年4月12日 17:11:44
   
     将从zoomeye api的结果永久保存在文件中，MetInfo攻击模块从文件中加载结果，进行攻击测试
