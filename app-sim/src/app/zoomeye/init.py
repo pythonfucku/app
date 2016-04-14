@@ -18,6 +18,7 @@ def initConf():
 	parser.add_option("--query",dest="query",help="")
 	parser.add_option("--facets",dest="facets",help="")
 	parser.add_option("--page",dest="page",help="")
+	parser.add_option("--attack",dest="attack",help="")
 
 	(options, args) = parser.parse_args()  
 																																	 
@@ -30,6 +31,7 @@ def initConf():
 	conf.zoomeye.query = options.query
 	conf.zoomeye.facets = options.facets
 	conf.zoomeye.page = options.page
+	conf.zoomeye.attack = options.attack
 
 def initZoomeye():
 	conf.zoomeye.key = ""

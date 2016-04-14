@@ -5,7 +5,7 @@ import os
 import sys
 import requests
 import json
-import pickle,pprint
+import pickle
 from optparse import OptionParser
 
 sys.path.append("../../")
@@ -20,11 +20,9 @@ from lib.core.common import checkFile
 
 from init import initConf
 from init import initZoomeye
-from init import initSearchHostResult
 
 from setResut import setSearchResult
 
-#from MetInfo import attack
 import MetInfo
  
 def init():
@@ -35,11 +33,6 @@ def init():
 	initConf()
 	initZoomeye()
 
-	'''
-	if or not init here
-	no use
-	'''
-	#initSearchHostResult()
 
 def login():
 	data = {}
@@ -94,19 +87,15 @@ def apiSearch():
 		logger.debug("search url:{0}".format(target))
 		count = int(conf.zoomeye.page)
 		tmp = []
+		resultCount = 0
 		for i in range(count):
 			conf.zoomeye.page = i
 			r = requests.get(target,headers = headers)
 			r_decoded = json.loads(r.text)
-
+			resultCount += len(r_decoded["matches"])
 			tmp.append(r_decoded)
-			#TEST
-			#TODO
-			for x in r_decoded['matches']:
-				logger.info("find ip:" + x['ip'])
-				conf.zoomeye.ip_list.append(x['ip'])
-
 		saveSearchResult(tmp)
+		logger.info("search results count:{0}".format(resultCount))
 
 	except Exception,e:
 		if str(e.message) == 'matches':
@@ -119,17 +108,11 @@ def apiSearch():
 		raise ZoomeyeSearchException(errMessage)
 
 def saveSearchResult(obj):
-	f = open("searchResult","wb")
-	pickle.dump(obj,f)
+	f = open(paths.APP_RESULT_FILE,"wb")
+	for _ in obj:
+		pickle.dump(_,f)
 	f.close()
 
-"""
-def readSearchResult():
-	f = open("searchResult","rb")
-	data1 = pickle.load(f)
-	#pprint.pprint(data1)
-	f.close()
-"""
 
 def saveStrToFile(file,str):
 	with open(file,'w') as output:
@@ -192,17 +175,17 @@ def main():
 		checkEnv()
 		login()
 		apiSearch()
-		#readSearchResult()
-		saveListToFile(paths.APP_RESULT_FILE,conf.zoomeye.ip_list)
+		logger.info("Save result file {0}".format(paths.APP_RESULT_FILE))
 	except ZoomeyeSearchException as e:
 		raise ZoomeyeSearchException("Zoomeye app running exception,over")
 
-	"""
-	for ip in conf.zoomeye.ip_list:
-		attack(ip)
-	"""
-	MetInfo.main("searchResult")
-	#a.main("searchResult")
+	logger.debug(conf.zoomeye.attack)
+	if conf.zoomeye.attack:
+		appName = conf.zoomeye.attack
+		logger.debug(appName)
+		attackModule = __import__(appName, globals(), locals(), "main")
+		getattr(attackModule, "main", None)(paths.APP_RESULT_FILE)
+
  
 if __name__ == '__main__':
 	main()

