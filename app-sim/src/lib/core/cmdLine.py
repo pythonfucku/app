@@ -1,46 +1,65 @@
 #!/bin/evn python
 # encoding:utf-8
-"""
-Author:liangrt
-Date:2016-03-10
-"""
+'''
+#=============================================================================
+#     FileName: cmdLine.py
+#         Desc: 解析命令行参数，供zoomeye使用
+#       Author: Crow
+#        Email: lrt_no1@163.com
+#     HomePage: @_@"
+#      Version: 0.0.1
+#   LastChange: 2016-05-24 10:02:24
+#      History:
+#=============================================================================
+'''
+
 import sys
 #from optparse import OptionError
 #from optparse import OptionGroup
 from optparse import OptionParser
 #from optparse import SUPPRESS_HELP
 
-from data import conf
-from datatype import AttribDict
+from lib.core.enum import SYS
 
 def cmdLineParser(argv=None):
 
-	if not argv:
-		argv = sys.argv
+    if not argv:
+        argv = sys.argv
+    try:
+        parser = OptionParser()
 
-	try:
-		parser = OptionParser()
+        """
+        parser.add_option("--hh",dest="advancedHelp",
+                          action="store_true",
+                          help="Show advanced help message and exit")
+        parser.add_option("--version",dest="showVersion",
+                          action="store_true",
+                          help="Show program's version number and exit")
+        parser.add_option("-v",dest="verbose",type="int",
+                          help="")
+        """
 
-		parser.add_option("--hh",dest="advancedHelp",
-							action="store_true",
-							help="Show advanced help message and exit")
-		parser.add_option("--version",dest="showVersion",
-							action="store_true",
-							help="Show program's version number and exit")
-		parser.add_option("-v",dest="verbose",type="int",
-							help="")
+        parser.add_option("-d", action="store_true",dest="qiantai",
+                          help="")
+        parser.add_option("-s", action="store_true",dest="houtai",
+                          help="")
 
-		parser.add_option("--app",dest="app",help="")
-		
-		(options, args) = parser.parse_args()
+        parser.add_option("--app",dest="app",help="")
 
-		conf.app = AttribDict()
-		conf.app.name = options.app
-		conf.app.file = None
-		conf.app.imp = None
-		conf.app.func = None
+        (options, args) = parser.parse_args()
 
-	except:
-		pass
 
-	return parser
+        if options.app:
+            SYS.APP = options.app
+
+        if options.qiantai:
+            SYS.RUN_MODULE = 1
+        elif options.houtai:
+            SYS.RUN_MODULE  = 0
+
+
+    except Exception,e:
+        print str(e)
+        pass
+
+    return parser

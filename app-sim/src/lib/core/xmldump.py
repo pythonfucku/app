@@ -1,9 +1,17 @@
 #!/bin/env python
+'''
+#=============================================================================
+#     FileName: xmldump.py
+#         Desc: 转换cms中各话单格式
+#       Author: Crow
+#        Email: lrt_no1@163.com
+#     HomePage: @_@"
+#      Version: 0.0.1
+#   LastChange: 2016-05-24 10:04:09
+#      History:
+#=============================================================================
+'''
 
-"""
-Author:liangrt
-Date:2016-03-10
-"""
 
 from xml.dom import minidom
 import struct

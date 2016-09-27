@@ -1,9 +1,16 @@
 #!/usr/bin/env python
-
-"""
-Author:liangrt
-Date:2016-03-10
-"""
+'''
+#=============================================================================
+#     FileName: datatype.py
+#         Desc: 
+#       Author: Crow
+#        Email: lrt_no1@163.com
+#     HomePage: @_@"
+#      Version: 0.0.1
+#   LastChange: 2016-08-08 09:43:38
+#      History:
+#=============================================================================
+'''
 
 import copy
 import types
