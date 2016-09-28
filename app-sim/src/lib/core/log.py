@@ -39,7 +39,10 @@ except:
 
 #-------------------------------
 SYS.RUN_MODULE = TYPE
-SYS.APP = APP
+SYS.APP = APP.split(',') 
+for tmp in SYS.APP:
+    if len(tmp.rstrip().lstrip()) == 0:
+        SYS.APP.remove(tmp)
 #判断是否为命令行提供启动参数
 cmdLineParser()
 #-------------------------------

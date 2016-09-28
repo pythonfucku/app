@@ -19,19 +19,16 @@ from lib.server.MPServer import mpServer
 
 def test1(j,a):
     i = 0
-    processes = [
-        (test2,"test2",(200,30)),
-    ]
     for i in range(j):
         i += 1
-        logger.info("test11111 working:{0}".format(i)) 
+        logger.info("test33333 working:{0}".format(i)) 
         time.sleep(1)
 
 def test2(j,a):
     i = 0
     for i in range(j):
         i += 1
-        logger.info("test22222 working:{0}".format(i) )
+        logger.info("test44444 working:{0}".format(i) )
         time.sleep(1)
 
 if_runForever = False
@@ -42,8 +39,8 @@ def main():
 
 class testapp():
     processes = [
-        (test1,False,"test1-1",(30,20)),
-        (test2,False,"test2-2",(30,30)),
+        (test1,False,"test3-3",(30,20)),
+        (test2,False,"test4-4",(30,30)),
     ]
     def main(self):
         a = mpServer(self.processes)

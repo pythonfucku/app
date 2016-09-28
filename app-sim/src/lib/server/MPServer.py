@@ -46,10 +46,10 @@ class mpServer:
         self.children = {}
         self._processList = []
 
-        for f,name,args in funcList:
+        for f,if_runForever,name,args in funcList:
             tmp = app(if_runForever,f,name,args)
             self._processList.append(tmp)
-        
+
     def run(self):
         self.main()
 
@@ -100,7 +100,8 @@ class mpServer:
                             obj.pid = w.pid
                             logger.error("process name:{0},pid:{1}] is down,need restart,new pid:{2}".format(obj.name,obj.pid,w.pid))
                 else:
-                    logger.info("process[name:{0},pid:{1}],running normal".format(obj.process.name,obj.process.pid))
+                    #logger.info("process[name:{0},pid:{1}],running normal".format(obj.process.name,obj.process.pid))
+                    pass
 
             if not len(self.children):
                 self.children_exit_flag = True

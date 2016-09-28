@@ -1,0 +1,1845 @@
+20160928094319,4072,ERROR > [Errno 2] No such file or directory: '/home/liangrt/app/app-sim/locks/app-sim.lock'
+20160928094319,4072,INFO > [main] call children shutdown
+20160928094547,4121,ERROR > [Errno 2] No such file or directory: '/home/liangrt/app/app-sim/locks/app-sim.lock'
+20160928094547,4121,INFO > [main] call children shutdown
+20160928094638,4135,ERROR > 'NoneType' object has no attribute 'name'
+20160928094638,4135,INFO > [main] call children shutdown
+20160928094702,4136,ERROR > 'NoneType' object has no attribute 'name'
+20160928094702,4136,INFO > [main] call children shutdown
+20160928094848,4143,DEBUG > APP NAME:test
+20160928094848,4143,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928094848,4143,DEBUG > APP IMPORT:app.test.run
+20160928094848,4143,DEBUG > New process:test,pid:4144 start to work
+20160928094848,4143,INFO > process[name:test,pid:4144],running normal
+20160928094848,4144,DEBUG > New process:test1,pid:4145 start to work
+20160928094848,4144,DEBUG > New process:test2,pid:4146 start to work
+20160928094848,4144,INFO > process[name:test1,pid:4145],running normal
+20160928094848,4144,INFO > process[name:test2,pid:4146],running normal
+20160928094848,4146,INFO > test22222 working:1
+20160928094848,4145,INFO > test11111 working:1
+20160928094849,4143,INFO > process[name:test,pid:4144],running normal
+20160928094849,4146,INFO > test22222 working:2
+20160928094849,4145,INFO > test11111 working:2
+20160928094849,4144,INFO > process[name:test1,pid:4145],running normal
+20160928094849,4144,INFO > process[name:test2,pid:4146],running normal
+20160928094850,4146,INFO > test22222 working:3
+20160928094850,4143,INFO > process[name:test,pid:4144],running normal
+20160928094850,4145,INFO > test11111 working:3
+20160928094850,4144,INFO > process[name:test1,pid:4145],running normal
+20160928094850,4144,INFO > process[name:test2,pid:4146],running normal
+20160928094851,4146,INFO > test22222 working:4
+20160928094851,4143,INFO > process[name:test,pid:4144],running normal
+20160928094851,4144,INFO > process[name:test1,pid:4145],running normal
+20160928094851,4145,INFO > test11111 working:4
+20160928094851,4144,INFO > process[name:test2,pid:4146],running normal
+20160928094851,4143,ERROR > process:test get exit code:2
+20160928094851,4145,ERROR > child process[name:test1,pid:4145] get exit code:2
+20160928094851,4144,ERROR > process: get exit code:2
+20160928094851,4146,ERROR > child process[name:test2,pid:4146] get exit code:2
+20160928094851,4145,ERROR > waitting for func running over
+20160928094851,4146,ERROR > waitting for func running over
+20160928094851,4143,ERROR > call children process[name:test,pid:4144] exit[10]
+20160928094851,4144,ERROR > call children process[name:test1,pid:4145] exit[10]
+20160928094851,4146,INFO > test22222 working:5
+20160928094851,4143,ERROR > wait process[name:test,pid:4144] shutdown
+20160928094851,4145,ERROR > child process[name:test1,pid:4145] get exit code:10
+20160928094851,4144,ERROR > call children process[name:test2,pid:4146] exit[10]
+20160928094851,4145,ERROR > waitting for func running over
+20160928094851,4144,ERROR > wait process[name:test1,pid:4145] shutdown
+20160928094851,4145,INFO > test11111 working:5
+20160928094851,4146,ERROR > child process[name:test2,pid:4146] get exit code:10
+20160928094851,4146,ERROR > waitting for func running over
+20160928094851,4146,INFO > test22222 working:6
+20160928094852,4145,INFO > test11111 working:6
+20160928094852,4146,INFO > test22222 working:7
+20160928094853,4145,INFO > test11111 working:7
+20160928094853,4146,INFO > test22222 working:8
+20160928094854,4145,INFO > test11111 working:8
+20160928094854,4146,INFO > test22222 working:9
+20160928094855,4145,INFO > test11111 working:9
+20160928094855,4146,INFO > test22222 working:10
+20160928094856,4145,INFO > test11111 working:10
+20160928094856,4146,INFO > test22222 working:11
+20160928094857,4145,INFO > test11111 working:11
+20160928094857,4146,INFO > test22222 working:12
+20160928094858,4145,INFO > test11111 working:12
+20160928094858,4146,INFO > test22222 working:13
+20160928094859,4146,INFO > test22222 working:14
+20160928094859,4145,INFO > test11111 working:13
+20160928094900,4145,INFO > test11111 working:14
+20160928094900,4146,INFO > test22222 working:15
+20160928094901,4145,INFO > test11111 working:15
+20160928094901,4146,INFO > test22222 working:16
+20160928094902,4145,INFO > test11111 working:16
+20160928094902,4146,INFO > test22222 working:17
+20160928094903,4145,INFO > test11111 working:17
+20160928094903,4146,INFO > test22222 working:18
+20160928094904,4145,INFO > test11111 working:18
+20160928094904,4146,INFO > test22222 working:19
+20160928094905,4145,INFO > test11111 working:19
+20160928094905,4146,INFO > test22222 working:20
+20160928094906,4146,INFO > test22222 working:21
+20160928094906,4145,INFO > test11111 working:20
+20160928094907,4145,INFO > test11111 working:21
+20160928094907,4146,INFO > test22222 working:22
+20160928094908,4145,INFO > test11111 working:22
+20160928094908,4146,INFO > test22222 working:23
+20160928094909,4145,INFO > test11111 working:23
+20160928094909,4146,INFO > test22222 working:24
+20160928094910,4145,INFO > test11111 working:24
+20160928094910,4146,INFO > test22222 working:25
+20160928094911,4145,INFO > test11111 working:25
+20160928094911,4146,INFO > test22222 working:26
+20160928094912,4145,INFO > test11111 working:26
+20160928094912,4146,INFO > test22222 working:27
+20160928094913,4146,INFO > test22222 working:28
+20160928094913,4145,INFO > test11111 working:27
+20160928094914,4146,INFO > test22222 working:29
+20160928094914,4145,INFO > test11111 working:28
+20160928094915,4146,INFO > test22222 working:30
+20160928094915,4145,INFO > test11111 working:29
+20160928094916,4146,INFO > test22222 working:31
+20160928094916,4145,INFO > test11111 working:30
+20160928094917,4146,INFO > test22222 working:32
+20160928094917,4145,ERROR > child process[name:test1,pid:4145] exit[10]
+20160928094917,4144,ERROR > main process[name:test1,pid:4145] exit
+20160928094917,4144,ERROR > wait process[name:test2,pid:4146] shutdown
+20160928094918,4146,INFO > test22222 working:33
+20160928094919,4146,INFO > test22222 working:34
+20160928094920,4146,INFO > test22222 working:35
+20160928094921,4146,INFO > test22222 working:36
+20160928094922,4146,INFO > test22222 working:37
+20160928094923,4146,INFO > test22222 working:38
+20160928094924,4146,INFO > test22222 working:39
+20160928094925,4146,INFO > test22222 working:40
+20160928094926,4146,ERROR > child process[name:test2,pid:4146] exit[10]
+20160928094926,4144,ERROR > main process[name:test2,pid:4146] exit
+20160928094926,4144,ERROR > process: get exit code:10
+20160928094926,4144,ERROR > pp 4144
+20160928094926,4143,ERROR > main process[name:test,pid:4144] exit
+20160928094933,4165,DEBUG > APP NAME:test
+20160928094933,4165,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928094933,4165,DEBUG > APP IMPORT:app.test.run
+20160928094933,4165,DEBUG > APP NAME:test1
+20160928094933,4165,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928094933,4165,DEBUG > APP IMPORT:app.test1.run
+20160928094933,4165,DEBUG > APP NAME:test
+20160928094933,4165,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928094933,4165,DEBUG > APP IMPORT:app.test.run
+20160928094933,4165,DEBUG > APP NAME:test1
+20160928094933,4165,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928094933,4165,DEBUG > APP IMPORT:app.test1.run
+20160928094933,4165,DEBUG > New process:test,pid:4166 start to work
+20160928094933,4165,INFO > process[name:test,pid:4166],running normal
+20160928094933,4166,DEBUG > New process:test1,pid:4167 start to work
+20160928094933,4167,INFO > test11111 working:1
+20160928094933,4166,DEBUG > New process:test2,pid:4168 start to work
+20160928094933,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094933,4168,INFO > test22222 working:1
+20160928094933,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094934,4167,INFO > test11111 working:2
+20160928094934,4165,INFO > process[name:test,pid:4166],running normal
+20160928094934,4168,INFO > test22222 working:2
+20160928094934,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094934,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094935,4167,INFO > test11111 working:3
+20160928094935,4165,INFO > process[name:test,pid:4166],running normal
+20160928094935,4168,INFO > test22222 working:3
+20160928094935,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094935,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094936,4167,INFO > test11111 working:4
+20160928094936,4168,INFO > test22222 working:4
+20160928094936,4165,INFO > process[name:test,pid:4166],running normal
+20160928094936,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094936,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094937,4167,INFO > test11111 working:5
+20160928094937,4168,INFO > test22222 working:5
+20160928094937,4165,INFO > process[name:test,pid:4166],running normal
+20160928094937,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094937,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094938,4168,INFO > test22222 working:6
+20160928094938,4167,INFO > test11111 working:6
+20160928094938,4165,INFO > process[name:test,pid:4166],running normal
+20160928094938,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094938,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094939,4167,INFO > test11111 working:7
+20160928094939,4168,INFO > test22222 working:7
+20160928094939,4165,INFO > process[name:test,pid:4166],running normal
+20160928094939,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094939,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094940,4165,INFO > process[name:test,pid:4166],running normal
+20160928094940,4168,INFO > test22222 working:8
+20160928094940,4167,INFO > test11111 working:8
+20160928094940,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094940,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094941,4165,INFO > process[name:test,pid:4166],running normal
+20160928094941,4168,INFO > test22222 working:9
+20160928094941,4167,INFO > test11111 working:9
+20160928094941,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094941,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094942,4168,INFO > test22222 working:10
+20160928094942,4165,INFO > process[name:test,pid:4166],running normal
+20160928094942,4167,INFO > test11111 working:10
+20160928094942,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094942,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094943,4168,INFO > test22222 working:11
+20160928094943,4165,INFO > process[name:test,pid:4166],running normal
+20160928094943,4167,INFO > test11111 working:11
+20160928094943,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094943,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094944,4167,INFO > test11111 working:12
+20160928094944,4165,INFO > process[name:test,pid:4166],running normal
+20160928094944,4168,INFO > test22222 working:12
+20160928094944,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094944,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094945,4168,INFO > test22222 working:13
+20160928094945,4167,INFO > test11111 working:13
+20160928094945,4165,INFO > process[name:test,pid:4166],running normal
+20160928094945,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094945,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094946,4168,INFO > test22222 working:14
+20160928094946,4165,INFO > process[name:test,pid:4166],running normal
+20160928094946,4167,INFO > test11111 working:14
+20160928094946,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094946,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094947,4168,INFO > test22222 working:15
+20160928094947,4165,INFO > process[name:test,pid:4166],running normal
+20160928094947,4167,INFO > test11111 working:15
+20160928094947,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094947,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094948,4168,INFO > test22222 working:16
+20160928094948,4165,INFO > process[name:test,pid:4166],running normal
+20160928094948,4167,INFO > test11111 working:16
+20160928094948,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094948,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094949,4168,INFO > test22222 working:17
+20160928094949,4165,INFO > process[name:test,pid:4166],running normal
+20160928094949,4167,INFO > test11111 working:17
+20160928094949,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094949,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094950,4167,INFO > test11111 working:18
+20160928094950,4168,INFO > test22222 working:18
+20160928094950,4165,INFO > process[name:test,pid:4166],running normal
+20160928094950,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094950,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094951,4168,INFO > test22222 working:19
+20160928094951,4165,INFO > process[name:test,pid:4166],running normal
+20160928094951,4167,INFO > test11111 working:19
+20160928094951,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094951,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094952,4165,INFO > process[name:test,pid:4166],running normal
+20160928094952,4168,INFO > test22222 working:20
+20160928094952,4167,INFO > test11111 working:20
+20160928094952,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094952,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094953,4167,INFO > test11111 working:21
+20160928094953,4165,INFO > process[name:test,pid:4166],running normal
+20160928094953,4168,INFO > test22222 working:21
+20160928094953,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094953,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094954,4167,INFO > test11111 working:22
+20160928094954,4165,INFO > process[name:test,pid:4166],running normal
+20160928094954,4168,INFO > test22222 working:22
+20160928094954,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094954,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094955,4167,INFO > test11111 working:23
+20160928094955,4165,INFO > process[name:test,pid:4166],running normal
+20160928094955,4168,INFO > test22222 working:23
+20160928094955,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094955,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094956,4168,INFO > test22222 working:24
+20160928094956,4165,INFO > process[name:test,pid:4166],running normal
+20160928094956,4167,INFO > test11111 working:24
+20160928094956,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094956,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094957,4167,INFO > test11111 working:25
+20160928094957,4168,INFO > test22222 working:25
+20160928094957,4165,INFO > process[name:test,pid:4166],running normal
+20160928094957,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094957,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094958,4165,INFO > process[name:test,pid:4166],running normal
+20160928094958,4168,INFO > test22222 working:26
+20160928094958,4167,INFO > test11111 working:26
+20160928094958,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094958,4166,INFO > process[name:test2,pid:4168],running normal
+20160928094959,4168,INFO > test22222 working:27
+20160928094959,4165,INFO > process[name:test,pid:4166],running normal
+20160928094959,4167,INFO > test11111 working:27
+20160928094959,4166,INFO > process[name:test1,pid:4167],running normal
+20160928094959,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095000,4165,INFO > process[name:test,pid:4166],running normal
+20160928095000,4168,INFO > test22222 working:28
+20160928095000,4167,INFO > test11111 working:28
+20160928095000,4166,INFO > process[name:test1,pid:4167],running normal
+20160928095000,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095001,4165,INFO > process[name:test,pid:4166],running normal
+20160928095001,4168,INFO > test22222 working:29
+20160928095001,4167,INFO > test11111 working:29
+20160928095001,4166,INFO > process[name:test1,pid:4167],running normal
+20160928095001,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095002,4168,INFO > test22222 working:30
+20160928095002,4165,INFO > process[name:test,pid:4166],running normal
+20160928095002,4167,INFO > test11111 working:30
+20160928095002,4166,INFO > process[name:test1,pid:4167],running normal
+20160928095002,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095003,4167,ERROR > child process[name:test1,pid:4167] exit[0]
+20160928095003,4168,INFO > test22222 working:31
+20160928095003,4165,INFO > process[name:test,pid:4166],running normal
+20160928095003,4166,DEBUG > process[name:test1,pid4167],run over.
+20160928095004,4165,INFO > process[name:test,pid:4166],running normal
+20160928095004,4168,INFO > test22222 working:32
+20160928095004,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095005,4168,INFO > test22222 working:33
+20160928095005,4165,INFO > process[name:test,pid:4166],running normal
+20160928095005,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095006,4165,INFO > process[name:test,pid:4166],running normal
+20160928095006,4168,INFO > test22222 working:34
+20160928095006,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095007,4168,INFO > test22222 working:35
+20160928095007,4165,INFO > process[name:test,pid:4166],running normal
+20160928095007,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095008,4165,INFO > process[name:test,pid:4166],running normal
+20160928095008,4168,INFO > test22222 working:36
+20160928095008,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095009,4168,INFO > test22222 working:37
+20160928095009,4165,INFO > process[name:test,pid:4166],running normal
+20160928095009,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095010,4168,INFO > test22222 working:38
+20160928095010,4165,INFO > process[name:test,pid:4166],running normal
+20160928095010,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095011,4165,INFO > process[name:test,pid:4166],running normal
+20160928095011,4168,INFO > test22222 working:39
+20160928095011,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095012,4168,INFO > test22222 working:40
+20160928095012,4165,INFO > process[name:test,pid:4166],running normal
+20160928095012,4166,INFO > process[name:test2,pid:4168],running normal
+20160928095013,4168,ERROR > child process[name:test2,pid:4168] exit[0]
+20160928095013,4165,INFO > process[name:test,pid:4166],running normal
+20160928095013,4166,DEBUG > process[name:test2,pid4168],run over.
+20160928095014,4165,INFO > process[name:test,pid:4166],running normal
+20160928095014,4166,ERROR > main process exit
+20160928095014,4166,ERROR > child process[name:test,pid:4166] exit[0]
+20160928095015,4165,DEBUG > process[name:test,pid4166],run over.
+20160928095016,4165,ERROR > main process exit
+20160928095016,4165,DEBUG > New process:test1,pid:4187 start to work
+20160928095016,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095016,4187,DEBUG > New process:test1,pid:4188 start to work
+20160928095016,4188,INFO > test11111 working:1
+20160928095016,4187,DEBUG > New process:test2,pid:4189 start to work
+20160928095016,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095016,4189,INFO > test22222 working:1
+20160928095016,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095017,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095017,4188,INFO > test11111 working:2
+20160928095017,4189,INFO > test22222 working:2
+20160928095017,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095017,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095018,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095018,4189,INFO > test22222 working:3
+20160928095018,4188,INFO > test11111 working:3
+20160928095018,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095018,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095019,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095019,4189,INFO > test22222 working:4
+20160928095019,4188,INFO > test11111 working:4
+20160928095019,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095019,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095020,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095020,4188,INFO > test11111 working:5
+20160928095020,4189,INFO > test22222 working:5
+20160928095020,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095020,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095021,4188,INFO > test11111 working:6
+20160928095021,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095021,4189,INFO > test22222 working:6
+20160928095021,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095021,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095022,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095022,4188,INFO > test11111 working:7
+20160928095022,4189,INFO > test22222 working:7
+20160928095022,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095022,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095023,4188,INFO > test11111 working:8
+20160928095023,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095023,4189,INFO > test22222 working:8
+20160928095023,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095023,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095024,4189,INFO > test22222 working:9
+20160928095024,4188,INFO > test11111 working:9
+20160928095024,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095024,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095024,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095025,4188,INFO > test11111 working:10
+20160928095025,4189,INFO > test22222 working:10
+20160928095025,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095025,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095025,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095026,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095026,4188,INFO > test11111 working:11
+20160928095026,4189,INFO > test22222 working:11
+20160928095026,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095026,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095027,4189,INFO > test22222 working:12
+20160928095027,4188,INFO > test11111 working:12
+20160928095027,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095027,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095027,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095028,4188,INFO > test11111 working:13
+20160928095028,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095028,4189,INFO > test22222 working:13
+20160928095028,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095028,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095029,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095029,4189,INFO > test22222 working:14
+20160928095029,4188,INFO > test11111 working:14
+20160928095029,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095029,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095030,4165,INFO > process[name:test1,pid:4187],running normal
+20160928095030,4188,INFO > test11111 working:15
+20160928095030,4189,INFO > test22222 working:15
+20160928095030,4187,INFO > process[name:test1,pid:4188],running normal
+20160928095030,4187,INFO > process[name:test2,pid:4189],running normal
+20160928095030,4188,ERROR > child process[name:test1,pid:4188] get exit code:2
+20160928095030,4187,ERROR > process: get exit code:2
+20160928095030,4188,ERROR > waitting for func running over
+20160928095030,4187,ERROR > call children process[name:test1,pid:4188] exit[10]
+20160928095030,4188,INFO > test11111 working:16
+20160928095030,4187,ERROR > call children process[name:test2,pid:4189] exit[10]
+20160928095030,4188,ERROR > child process[name:test1,pid:4188] get exit code:10
+20160928095030,4187,ERROR > wait process[name:test1,pid:4188] shutdown
+20160928095030,4188,ERROR > waitting for func running over
+20160928095030,4165,ERROR > process:test1 get exit code:2
+20160928095030,4165,ERROR > call children process[name:test1,pid:4187] exit[10]
+20160928095030,4165,ERROR > wait process[name:test1,pid:4187] shutdown
+20160928095030,4187,ERROR > process: get exit code:10
+20160928095030,4189,ERROR > child process[name:test2,pid:4189] get exit code:2
+20160928095030,4187,ERROR > call children process[name:test1,pid:4188] exit[10]
+20160928095030,4189,ERROR > waitting for func running over
+20160928095030,4187,ERROR > call children process[name:test2,pid:4189] exit[10]
+20160928095030,4189,ERROR > child process[name:test2,pid:4189] get exit code:10
+20160928095030,4188,ERROR > child process[name:test1,pid:4188] get exit code:10
+20160928095030,4187,ERROR > wait process[name:test1,pid:4188] shutdown
+20160928095030,4189,ERROR > waitting for func running over
+20160928095030,4188,ERROR > waitting for func running over
+20160928095030,4189,ERROR > child process[name:test2,pid:4189] get exit code:10
+20160928095030,4188,INFO > test11111 working:17
+20160928095030,4189,ERROR > waitting for func running over
+20160928095030,4189,INFO > test22222 working:16
+20160928095031,4189,INFO > test22222 working:17
+20160928095031,4188,INFO > test11111 working:18
+20160928095032,4189,INFO > test22222 working:18
+20160928095032,4188,INFO > test11111 working:19
+20160928095033,4188,INFO > test11111 working:20
+20160928095033,4189,INFO > test22222 working:19
+20160928095034,4188,INFO > test11111 working:21
+20160928095034,4189,INFO > test22222 working:20
+20160928095035,4188,INFO > test11111 working:22
+20160928095035,4189,INFO > test22222 working:21
+20160928095036,4188,INFO > test11111 working:23
+20160928095036,4189,INFO > test22222 working:22
+20160928095037,4188,INFO > test11111 working:24
+20160928095037,4189,INFO > test22222 working:23
+20160928095038,4188,INFO > test11111 working:25
+20160928095038,4189,INFO > test22222 working:24
+20160928095039,4188,INFO > test11111 working:26
+20160928095039,4189,INFO > test22222 working:25
+20160928095040,4188,INFO > test11111 working:27
+20160928095040,4189,INFO > test22222 working:26
+20160928095041,4188,INFO > test11111 working:28
+20160928095041,4189,INFO > test22222 working:27
+20160928095042,4188,INFO > test11111 working:29
+20160928095042,4189,INFO > test22222 working:28
+20160928095043,4188,INFO > test11111 working:30
+20160928095043,4189,INFO > test22222 working:29
+20160928095044,4188,ERROR > child process[name:test1,pid:4188] exit[10]
+20160928095044,4189,INFO > test22222 working:30
+20160928095044,4187,ERROR > main process[name:test1,pid:4188] exit
+20160928095044,4187,ERROR > wait process[name:test2,pid:4189] shutdown
+20160928095045,4189,INFO > test22222 working:31
+20160928095046,4189,INFO > test22222 working:32
+20160928095047,4189,INFO > test22222 working:33
+20160928095048,4189,INFO > test22222 working:34
+20160928095049,4189,INFO > test22222 working:35
+20160928095050,4189,INFO > test22222 working:36
+20160928095051,4189,INFO > test22222 working:37
+20160928095052,4189,INFO > test22222 working:38
+20160928095053,4189,INFO > test22222 working:39
+20160928095054,4189,INFO > test22222 working:40
+20160928095055,4189,ERROR > child process[name:test2,pid:4189] exit[10]
+20160928095055,4187,ERROR > main process[name:test2,pid:4189] exit
+20160928095055,4165,ERROR > main process[name:test1,pid:4187] exit
+20160928095058,4200,DEBUG > APP NAME:test
+20160928095058,4200,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928095058,4200,DEBUG > APP IMPORT:app.test.run
+20160928095058,4200,DEBUG > APP NAME:test1
+20160928095058,4200,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928095058,4200,DEBUG > APP IMPORT:app.test1.run
+20160928095058,4200,DEBUG > APP NAME:test
+20160928095058,4200,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928095058,4200,DEBUG > APP IMPORT:app.test.run
+20160928095058,4200,DEBUG > APP NAME:test1
+20160928095058,4200,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928095058,4200,DEBUG > APP IMPORT:app.test1.run
+20160928095058,4200,DEBUG > New process:test,pid:4201 start to work
+20160928095058,4200,INFO > process[name:test,pid:4201],running normal
+20160928095058,4201,DEBUG > New process:test1,pid:4202 start to work
+20160928095058,4202,INFO > test11111 working:1
+20160928095058,4201,DEBUG > New process:test2,pid:4203 start to work
+20160928095058,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095058,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095058,4203,INFO > test22222 working:1
+20160928095059,4200,INFO > process[name:test,pid:4201],running normal
+20160928095059,4202,INFO > test11111 working:2
+20160928095059,4203,INFO > test22222 working:2
+20160928095059,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095059,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095100,4200,INFO > process[name:test,pid:4201],running normal
+20160928095100,4202,INFO > test11111 working:3
+20160928095100,4203,INFO > test22222 working:3
+20160928095100,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095100,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095101,4200,INFO > process[name:test,pid:4201],running normal
+20160928095101,4202,INFO > test11111 working:4
+20160928095101,4203,INFO > test22222 working:4
+20160928095101,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095101,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095102,4200,INFO > process[name:test,pid:4201],running normal
+20160928095102,4203,INFO > test22222 working:5
+20160928095102,4202,INFO > test11111 working:5
+20160928095102,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095102,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095103,4203,INFO > test22222 working:6
+20160928095103,4202,INFO > test11111 working:6
+20160928095103,4200,INFO > process[name:test,pid:4201],running normal
+20160928095103,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095103,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095104,4200,INFO > process[name:test,pid:4201],running normal
+20160928095104,4202,INFO > test11111 working:7
+20160928095104,4203,INFO > test22222 working:7
+20160928095104,4201,INFO > process[name:test1,pid:4202],running normal
+20160928095104,4201,INFO > process[name:test2,pid:4203],running normal
+20160928095104,4202,ERROR > child process[name:test1,pid:4202] get exit code:2
+20160928095104,4203,ERROR > child process[name:test2,pid:4203] get exit code:2
+20160928095104,4202,ERROR > waitting for func running over
+20160928095104,4203,ERROR > waitting for func running over
+20160928095104,4202,INFO > test11111 working:8
+20160928095104,4203,INFO > test22222 working:8
+20160928095104,4201,ERROR > process: get exit code:2
+20160928095104,4200,ERROR > process:test get exit code:2
+20160928095104,4201,ERROR > call children process[name:test1,pid:4202] exit[10]
+20160928095104,4200,ERROR > call children process[name:test,pid:4201] exit[10]
+20160928095104,4201,ERROR > call children process[name:test2,pid:4203] exit[10]
+20160928095104,4202,ERROR > child process[name:test1,pid:4202] get exit code:10
+20160928095104,4200,ERROR > wait process[name:test,pid:4201] shutdown
+20160928095104,4201,ERROR > wait process[name:test1,pid:4202] shutdown
+20160928095104,4203,ERROR > child process[name:test2,pid:4203] get exit code:10
+20160928095104,4202,ERROR > waitting for func running over
+20160928095104,4202,INFO > test11111 working:9
+20160928095104,4203,ERROR > waitting for func running over
+20160928095104,4203,INFO > test22222 working:9
+20160928095105,4202,INFO > test11111 working:10
+20160928095105,4203,INFO > test22222 working:10
+20160928095106,4202,INFO > test11111 working:11
+20160928095106,4203,INFO > test22222 working:11
+20160928095107,4203,INFO > test22222 working:12
+20160928095107,4202,INFO > test11111 working:12
+20160928095108,4203,INFO > test22222 working:13
+20160928095108,4202,INFO > test11111 working:13
+20160928095109,4203,INFO > test22222 working:14
+20160928095109,4202,INFO > test11111 working:14
+20160928095110,4203,INFO > test22222 working:15
+20160928095110,4202,INFO > test11111 working:15
+20160928095111,4202,INFO > test11111 working:16
+20160928095111,4203,INFO > test22222 working:16
+20160928095112,4202,INFO > test11111 working:17
+20160928095112,4203,INFO > test22222 working:17
+20160928095113,4202,INFO > test11111 working:18
+20160928095113,4203,INFO > test22222 working:18
+20160928095114,4203,INFO > test22222 working:19
+20160928095114,4202,INFO > test11111 working:19
+20160928095115,4203,INFO > test22222 working:20
+20160928095115,4202,INFO > test11111 working:20
+20160928095116,4203,INFO > test22222 working:21
+20160928095116,4202,INFO > test11111 working:21
+20160928095117,4202,INFO > test11111 working:22
+20160928095117,4203,INFO > test22222 working:22
+20160928095118,4203,INFO > test22222 working:23
+20160928095118,4202,INFO > test11111 working:23
+20160928095119,4203,INFO > test22222 working:24
+20160928095119,4202,INFO > test11111 working:24
+20160928095120,4203,INFO > test22222 working:25
+20160928095120,4202,INFO > test11111 working:25
+20160928095121,4203,INFO > test22222 working:26
+20160928095121,4202,INFO > test11111 working:26
+20160928095122,4202,INFO > test11111 working:27
+20160928095122,4203,INFO > test22222 working:27
+20160928095123,4202,INFO > test11111 working:28
+20160928095123,4203,INFO > test22222 working:28
+20160928095124,4202,INFO > test11111 working:29
+20160928095124,4203,INFO > test22222 working:29
+20160928095125,4202,INFO > test11111 working:30
+20160928095125,4203,INFO > test22222 working:30
+20160928095126,4202,ERROR > child process[name:test1,pid:4202] exit[10]
+20160928095126,4203,INFO > test22222 working:31
+20160928095126,4201,ERROR > main process[name:test1,pid:4202] exit
+20160928095126,4201,ERROR > wait process[name:test2,pid:4203] shutdown
+20160928095127,4203,INFO > test22222 working:32
+20160928095128,4203,INFO > test22222 working:33
+20160928095129,4203,INFO > test22222 working:34
+20160928095130,4203,INFO > test22222 working:35
+20160928095131,4203,INFO > test22222 working:36
+20160928095132,4203,INFO > test22222 working:37
+20160928095133,4203,INFO > test22222 working:38
+20160928095134,4203,INFO > test22222 working:39
+20160928095135,4203,INFO > test22222 working:40
+20160928095136,4203,ERROR > child process[name:test2,pid:4203] exit[10]
+20160928095136,4201,ERROR > main process[name:test2,pid:4203] exit
+20160928095136,4201,ERROR > process: get exit code:10
+20160928095136,4201,ERROR > pp 4201
+20160928095136,4200,ERROR > main process[name:test,pid:4201] exit
+20160928095835,4246,DEBUG > APP NAME:test
+20160928095835,4246,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928095835,4246,DEBUG > APP IMPORT:app.test.run
+20160928095835,4246,DEBUG > APP NAME:test1
+20160928095835,4246,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928095835,4246,DEBUG > APP IMPORT:app.test1.run
+20160928095835,4246,DEBUG > APP NAME:test
+20160928095835,4246,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928095835,4246,DEBUG > APP IMPORT:app.test.run
+20160928095835,4246,DEBUG > APP NAME:test1
+20160928095835,4246,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928095835,4246,DEBUG > APP IMPORT:app.test1.run
+20160928095835,4246,DEBUG > New process:test1,pid:4247 start to work
+20160928095835,4246,INFO > process[name:test1,pid:4247],running normal
+20160928095836,4246,DEBUG > New process:test1,pid:4248 start to work
+20160928095836,4246,ERROR > process name:test1,pid:4248] is down,need restart,new pid:4248
+20160928095837,4246,ERROR > process:test1 get exit code:2
+20160928095837,4246,ERROR > call children process[name:test1,pid:4248] exit[10]
+20160928095837,4246,ERROR > wait process[name:test1,pid:4248] shutdown
+20160928095837,4246,ERROR > main process[name:test1,pid:4248] exit
+20160928100016,4293,DEBUG > APP NAME:test
+20160928100016,4293,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928100016,4293,DEBUG > APP IMPORT:app.test.run
+20160928100016,4293,DEBUG > APP NAME:test1
+20160928100016,4293,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928100016,4293,DEBUG > APP IMPORT:app.test1.run
+20160928100016,4293,DEBUG > APP NAME:test
+20160928100016,4293,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928100016,4293,DEBUG > APP IMPORT:app.test.run
+20160928100016,4293,DEBUG > APP NAME:test1
+20160928100016,4293,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928100016,4293,DEBUG > APP IMPORT:app.test1.run
+20160928100016,4293,DEBUG > New process:test1,pid:4294 start to work
+20160928100016,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100016,4294,DEBUG > New process:test3,pid:4295 start to work
+20160928100016,4295,INFO > test33333 working:1
+20160928100016,4294,DEBUG > New process:test4,pid:4296 start to work
+20160928100016,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100016,4296,INFO > test44444 working:1
+20160928100016,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100017,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100017,4295,INFO > test33333 working:2
+20160928100017,4296,INFO > test44444 working:2
+20160928100017,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100017,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100018,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100018,4295,INFO > test33333 working:3
+20160928100018,4296,INFO > test44444 working:3
+20160928100018,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100018,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100019,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100019,4295,INFO > test33333 working:4
+20160928100019,4296,INFO > test44444 working:4
+20160928100019,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100019,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100020,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100020,4295,INFO > test33333 working:5
+20160928100020,4296,INFO > test44444 working:5
+20160928100020,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100020,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100021,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100021,4295,INFO > test33333 working:6
+20160928100021,4296,INFO > test44444 working:6
+20160928100021,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100021,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100022,4296,INFO > test44444 working:7
+20160928100022,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100022,4295,INFO > test33333 working:7
+20160928100022,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100022,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100023,4296,INFO > test44444 working:8
+20160928100023,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100023,4295,INFO > test33333 working:8
+20160928100023,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100023,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100024,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100024,4296,INFO > test44444 working:9
+20160928100024,4295,INFO > test33333 working:9
+20160928100024,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100024,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100025,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100025,4296,INFO > test44444 working:10
+20160928100025,4295,INFO > test33333 working:10
+20160928100025,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100025,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100026,4296,INFO > test44444 working:11
+20160928100026,4295,INFO > test33333 working:11
+20160928100026,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100026,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100026,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100027,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100027,4295,INFO > test33333 working:12
+20160928100027,4296,INFO > test44444 working:12
+20160928100027,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100027,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100028,4295,INFO > test33333 working:13
+20160928100028,4296,INFO > test44444 working:13
+20160928100028,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100028,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100028,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100029,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100029,4296,INFO > test44444 working:14
+20160928100029,4295,INFO > test33333 working:14
+20160928100029,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100029,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100030,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100030,4295,INFO > test33333 working:15
+20160928100030,4296,INFO > test44444 working:15
+20160928100030,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100030,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100031,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100031,4295,INFO > test33333 working:16
+20160928100031,4296,INFO > test44444 working:16
+20160928100031,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100031,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100032,4296,INFO > test44444 working:17
+20160928100032,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100032,4295,INFO > test33333 working:17
+20160928100032,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100032,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100033,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100033,4296,INFO > test44444 working:18
+20160928100033,4295,INFO > test33333 working:18
+20160928100033,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100033,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100034,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100034,4296,INFO > test44444 working:19
+20160928100034,4295,INFO > test33333 working:19
+20160928100034,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100034,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100035,4296,INFO > test44444 working:20
+20160928100035,4295,INFO > test33333 working:20
+20160928100035,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100035,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100035,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100036,4295,INFO > test33333 working:21
+20160928100036,4296,INFO > test44444 working:21
+20160928100036,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100036,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100036,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100037,4295,INFO > test33333 working:22
+20160928100037,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100037,4296,INFO > test44444 working:22
+20160928100037,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100037,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100038,4295,INFO > test33333 working:23
+20160928100038,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100038,4296,INFO > test44444 working:23
+20160928100038,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100038,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100039,4295,INFO > test33333 working:24
+20160928100039,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100039,4296,INFO > test44444 working:24
+20160928100039,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100039,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100040,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100040,4295,INFO > test33333 working:25
+20160928100040,4296,INFO > test44444 working:25
+20160928100040,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100040,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100041,4295,INFO > test33333 working:26
+20160928100041,4296,INFO > test44444 working:26
+20160928100041,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100041,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100041,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100042,4295,INFO > test33333 working:27
+20160928100042,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100042,4296,INFO > test44444 working:27
+20160928100042,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100042,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100043,4295,INFO > test33333 working:28
+20160928100043,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100043,4296,INFO > test44444 working:28
+20160928100043,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100043,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100044,4295,INFO > test33333 working:29
+20160928100044,4296,INFO > test44444 working:29
+20160928100044,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100044,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100044,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100045,4296,INFO > test44444 working:30
+20160928100045,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100045,4295,INFO > test33333 working:30
+20160928100045,4294,INFO > process[name:test3,pid:4295],running normal
+20160928100045,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100046,4296,INFO > test44444 working:31
+20160928100046,4295,ERROR > child process[name:test3,pid:4295] exit[0]
+20160928100046,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100046,4294,DEBUG > process[name:test3,pid4295],run over.
+20160928100047,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100047,4296,INFO > test44444 working:32
+20160928100047,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100048,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100048,4296,INFO > test44444 working:33
+20160928100048,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100049,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100049,4296,INFO > test44444 working:34
+20160928100049,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100050,4296,INFO > test44444 working:35
+20160928100050,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100050,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100051,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100051,4296,INFO > test44444 working:36
+20160928100051,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100052,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100052,4296,INFO > test44444 working:37
+20160928100052,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100053,4296,INFO > test44444 working:38
+20160928100053,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100053,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100054,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100054,4296,INFO > test44444 working:39
+20160928100054,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100055,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100055,4296,INFO > test44444 working:40
+20160928100055,4294,INFO > process[name:test4,pid:4296],running normal
+20160928100056,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100056,4296,ERROR > child process[name:test4,pid:4296] exit[0]
+20160928100056,4294,DEBUG > process[name:test4,pid4296],run over.
+20160928100057,4293,INFO > process[name:test1,pid:4294],running normal
+20160928100057,4294,ERROR > main process exit
+20160928100057,4294,ERROR > child process[name:test1,pid:4294] exit[0]
+20160928100058,4293,DEBUG > process[name:test1,pid4294],run over.
+20160928100059,4293,ERROR > main process exit
+20160928100059,4293,INFO > System exit!
+20160928100059,4293,INFO > -------------------- System running over --------------------
+20160928100127,4323,DEBUG > APP NAME:test
+20160928100127,4323,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928100127,4323,DEBUG > APP IMPORT:app.test.run
+20160928100127,4323,DEBUG > APP NAME:test1
+20160928100127,4323,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928100127,4323,DEBUG > APP IMPORT:app.test1.run
+20160928100127,4323,DEBUG > APP NAME:test
+20160928100127,4323,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928100127,4323,DEBUG > APP IMPORT:app.test.run
+20160928100127,4323,DEBUG > APP NAME:test1
+20160928100127,4323,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928100127,4323,DEBUG > APP IMPORT:app.test1.run
+20160928100127,4323,DEBUG > New process:test1,pid:4324 start to work
+20160928100127,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100127,4324,DEBUG > New process:test3,pid:4325 start to work
+20160928100127,4325,INFO > test33333 working:1
+20160928100127,4324,DEBUG > New process:test4,pid:4326 start to work
+20160928100127,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100127,4326,INFO > test44444 working:1
+20160928100127,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100128,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100128,4325,INFO > test33333 working:2
+20160928100128,4326,INFO > test44444 working:2
+20160928100128,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100128,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100129,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100129,4325,INFO > test33333 working:3
+20160928100129,4326,INFO > test44444 working:3
+20160928100129,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100129,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100130,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100130,4325,INFO > test33333 working:4
+20160928100130,4326,INFO > test44444 working:4
+20160928100130,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100203,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100204,4325,INFO > test33333 working:5
+20160928100204,4326,INFO > test44444 working:5
+20160928100204,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100204,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100204,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100205,4325,INFO > test33333 working:6
+20160928100205,4326,INFO > test44444 working:6
+20160928100205,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100205,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100205,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100206,4326,INFO > test44444 working:7
+20160928100206,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100206,4325,INFO > test33333 working:7
+20160928100206,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100206,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100207,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100207,4325,INFO > test33333 working:8
+20160928100207,4326,INFO > test44444 working:8
+20160928100207,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100207,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100208,4326,INFO > test44444 working:9
+20160928100208,4325,INFO > test33333 working:9
+20160928100208,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100208,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100208,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100209,4326,INFO > test44444 working:10
+20160928100209,4325,INFO > test33333 working:10
+20160928100209,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100209,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100209,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100210,4324,INFO > process[name:test3,pid:4325],running normal
+20160928100210,4326,ERROR > child process[name:test4,pid:4326] exit[0]
+20160928100210,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100210,4325,ERROR > child process[name:test3,pid:4325] exit[0]
+20160928100210,4324,INFO > process[name:test4,pid:4326],running normal
+20160928100211,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100211,4324,DEBUG > process[name:test3,pid4325],run over.
+20160928100212,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100212,4324,DEBUG > process[name:test4,pid4326],run over.
+20160928100213,4323,INFO > process[name:test1,pid:4324],running normal
+20160928100213,4324,ERROR > main process exit
+20160928100213,4324,ERROR > child process[name:test1,pid:4324] exit[0]
+20160928100214,4323,DEBUG > process[name:test1,pid4324],run over.
+20160928100215,4323,ERROR > main process exit
+20160928100215,4323,INFO > System exit!
+20160928100215,4323,INFO > -------------------- System running over --------------------
+20160928100232,4330,DEBUG > APP NAME:test
+20160928100232,4330,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928100232,4330,DEBUG > APP IMPORT:app.test.run
+20160928100232,4330,DEBUG > APP NAME:test1
+20160928100232,4330,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928100232,4330,DEBUG > APP IMPORT:app.test1.run
+20160928100232,4330,DEBUG > APP NAME:test
+20160928100232,4330,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928100232,4330,DEBUG > APP IMPORT:app.test.run
+20160928100232,4330,DEBUG > APP NAME:test1
+20160928100232,4330,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928100232,4330,DEBUG > APP IMPORT:app.test1.run
+20160928100232,4330,DEBUG > New process:test1,pid:4331 start to work
+20160928100232,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100232,4331,DEBUG > New process:test3,pid:4332 start to work
+20160928100232,4332,INFO > test33333 working:1
+20160928100232,4331,DEBUG > New process:test4,pid:4333 start to work
+20160928100232,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100232,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100232,4333,INFO > test44444 working:1
+20160928100233,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100233,4332,INFO > test33333 working:2
+20160928100233,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100233,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100233,4333,INFO > test44444 working:2
+20160928100234,4332,INFO > test33333 working:3
+20160928100234,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100234,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100234,4333,INFO > test44444 working:3
+20160928100234,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100235,4332,INFO > test33333 working:4
+20160928100235,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100235,4333,INFO > test44444 working:4
+20160928100235,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100235,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100236,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100236,4332,INFO > test33333 working:5
+20160928100236,4333,INFO > test44444 working:5
+20160928100236,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100236,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100237,4332,INFO > test33333 working:6
+20160928100237,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100237,4333,INFO > test44444 working:6
+20160928100237,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100237,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100238,4332,INFO > test33333 working:7
+20160928100238,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100238,4333,INFO > test44444 working:7
+20160928100238,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100238,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100239,4332,INFO > test33333 working:8
+20160928100239,4333,INFO > test44444 working:8
+20160928100239,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100239,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100239,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100240,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100240,4333,INFO > test44444 working:9
+20160928100240,4332,INFO > test33333 working:9
+20160928100240,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100240,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100241,4333,INFO > test44444 working:10
+20160928100241,4332,INFO > test33333 working:10
+20160928100241,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100241,4331,INFO > process[name:test3,pid:4332],running normal
+20160928100241,4331,INFO > process[name:test4,pid:4333],running normal
+20160928100242,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100242,4332,ERROR > child process[name:test3,pid:4332] exit[0]
+20160928100242,4333,ERROR > child process[name:test4,pid:4333] exit[0]
+20160928100242,4331,DEBUG > process[name:test3,pid4332],run over.
+20160928100243,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100243,4331,DEBUG > process[name:test4,pid4333],run over.
+20160928100244,4330,INFO > process[name:test1,pid:4331],running normal
+20160928100244,4331,ERROR > main process exit
+20160928100244,4331,ERROR > child process[name:test1,pid:4331] exit[0]
+20160928100245,4330,DEBUG > process[name:test1,pid4331],run over.
+20160928100246,4330,ERROR > main process exit
+20160928100246,4330,INFO > System exit!
+20160928100246,4330,INFO > -------------------- System running over --------------------
+20160928100638,4356,ERROR > local variable 'app' referenced before assignment
+20160928100638,4356,INFO > [main] call children shutdown
+20160928100927,4409,ERROR > local variable 'app' referenced before assignment
+20160928100927,4409,INFO > [main] call children shutdown
+20160928101007,4411,ERROR > local variable 'app' referenced before assignment
+20160928101007,4411,INFO > [main] call children shutdown
+20160928101107,4424,ERROR > lookupApp() takes exactly 1 argument (0 given)
+20160928101107,4424,INFO > [main] call children shutdown
+20160928101127,4427,DEBUG > APP NAME:test
+20160928101127,4427,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928101127,4427,DEBUG > APP IMPORT:app.test.run
+20160928101127,4427,DEBUG > APP NAME:test1
+20160928101127,4427,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928101127,4427,DEBUG > APP IMPORT:app.test1.run
+20160928101127,4427,DEBUG > New process:test1,pid:4428 start to work
+20160928101127,4428,DEBUG > New process:test3,pid:4429 start to work
+20160928101127,4428,DEBUG > New process:test4,pid:4430 start to work
+20160928101127,4430,INFO > test44444 working:1
+20160928101127,4429,INFO > test33333 working:1
+20160928101128,4429,INFO > test33333 working:2
+20160928101128,4430,INFO > test44444 working:2
+20160928101129,4429,INFO > test33333 working:3
+20160928101129,4430,INFO > test44444 working:3
+20160928101130,4429,INFO > test33333 working:4
+20160928101130,4430,INFO > test44444 working:4
+20160928101131,4429,INFO > test33333 working:5
+20160928101131,4430,INFO > test44444 working:5
+20160928101132,4429,INFO > test33333 working:6
+20160928101132,4430,INFO > test44444 working:6
+20160928101133,4430,INFO > test44444 working:7
+20160928101133,4429,INFO > test33333 working:7
+20160928101134,4429,INFO > test33333 working:8
+20160928101134,4430,INFO > test44444 working:8
+20160928101135,4429,INFO > test33333 working:9
+20160928101135,4430,INFO > test44444 working:9
+20160928101136,4429,INFO > test33333 working:10
+20160928101136,4430,INFO > test44444 working:10
+20160928101137,4430,ERROR > child process[name:test4,pid:4430] exit[0]
+20160928101137,4429,ERROR > child process[name:test3,pid:4429] exit[0]
+20160928101138,4428,DEBUG > process[name:test3,pid4429],run over.
+20160928101139,4428,DEBUG > process[name:test4,pid4430],run over.
+20160928101140,4428,ERROR > main process exit
+20160928101140,4428,ERROR > child process[name:test1,pid:4428] exit[0]
+20160928101141,4427,DEBUG > process[name:test1,pid4428],run over.
+20160928101142,4427,ERROR > main process exit
+20160928101142,4427,INFO > System exit!
+20160928101142,4427,INFO > -------------------- System running over --------------------
+20160928101607,4533,DEBUG > APP NAME:test
+20160928101607,4533,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928101607,4533,DEBUG > APP IMPORT:app.test.run
+20160928101607,4533,DEBUG > APP NAME:test1
+20160928101607,4533,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928101607,4533,DEBUG > APP IMPORT:app.test1.run
+20160928101607,4533,DEBUG > New process:test1,pid:4534 start to work
+20160928101607,4534,DEBUG > New process:test3,pid:4535 start to work
+20160928101607,4535,INFO > test33333 working:1
+20160928101607,4534,DEBUG > New process:test4,pid:4536 start to work
+20160928101607,4536,INFO > test44444 working:1
+20160928101608,4535,INFO > test33333 working:2
+20160928101608,4536,INFO > test44444 working:2
+20160928101609,4535,INFO > test33333 working:3
+20160928101609,4536,INFO > test44444 working:3
+20160928101610,4535,INFO > test33333 working:4
+20160928101610,4536,INFO > test44444 working:4
+20160928101611,4535,INFO > test33333 working:5
+20160928101611,4536,INFO > test44444 working:5
+20160928101612,4535,INFO > test33333 working:6
+20160928101612,4536,INFO > test44444 working:6
+20160928101613,4536,INFO > test44444 working:7
+20160928101613,4535,INFO > test33333 working:7
+20160928101614,4536,INFO > test44444 working:8
+20160928101614,4535,INFO > test33333 working:8
+20160928101615,4536,INFO > test44444 working:9
+20160928101615,4535,INFO > test33333 working:9
+20160928101616,4536,INFO > test44444 working:10
+20160928101616,4535,INFO > test33333 working:10
+20160928101617,4535,INFO > test33333 working:11
+20160928101617,4536,INFO > test44444 working:11
+20160928101618,4536,INFO > test44444 working:12
+20160928101618,4535,INFO > test33333 working:12
+20160928101619,4536,INFO > test44444 working:13
+20160928101619,4535,INFO > test33333 working:13
+20160928101620,4535,INFO > test33333 working:14
+20160928101620,4536,INFO > test44444 working:14
+20160928101621,4535,INFO > test33333 working:15
+20160928101621,4536,INFO > test44444 working:15
+20160928101622,4535,INFO > test33333 working:16
+20160928101622,4536,INFO > test44444 working:16
+20160928101623,4536,INFO > test44444 working:17
+20160928101623,4535,INFO > test33333 working:17
+20160928101624,4536,INFO > test44444 working:18
+20160928101624,4535,INFO > test33333 working:18
+20160928101625,4536,INFO > test44444 working:19
+20160928101625,4535,INFO > test33333 working:19
+20160928101626,4535,INFO > test33333 working:20
+20160928101626,4536,INFO > test44444 working:20
+20160928101627,4536,INFO > test44444 working:21
+20160928101627,4535,INFO > test33333 working:21
+20160928101628,4535,INFO > test33333 working:22
+20160928101628,4536,INFO > test44444 working:22
+20160928101629,4535,INFO > test33333 working:23
+20160928101629,4536,INFO > test44444 working:23
+20160928101630,4535,INFO > test33333 working:24
+20160928101630,4536,INFO > test44444 working:24
+20160928101631,4536,INFO > test44444 working:25
+20160928101631,4535,INFO > test33333 working:25
+20160928101632,4536,INFO > test44444 working:26
+20160928101632,4535,INFO > test33333 working:26
+20160928101633,4535,INFO > test33333 working:27
+20160928101633,4536,INFO > test44444 working:27
+20160928101634,4536,INFO > test44444 working:28
+20160928101634,4535,INFO > test33333 working:28
+20160928101635,4536,INFO > test44444 working:29
+20160928101635,4535,INFO > test33333 working:29
+20160928101636,4536,INFO > test44444 working:30
+20160928101636,4535,INFO > test33333 working:30
+20160928101637,4536,ERROR > child process[name:test4,pid:4536] exit[0]
+20160928101637,4535,ERROR > child process[name:test3,pid:4535] exit[0]
+20160928101638,4534,DEBUG > process[name:test3,pid4535],run over.
+20160928101639,4534,DEBUG > process[name:test4,pid4536],run over.
+20160928101640,4534,ERROR > main process exit
+20160928101640,4534,ERROR > child process[name:test1,pid:4534] exit[0]
+20160928101641,4533,DEBUG > process[name:test1,pid4534],run over.
+20160928101642,4533,ERROR > main process exit
+20160928101642,4533,INFO > System exit!
+20160928101642,4533,INFO > -------------------- System running over --------------------
+20160928103343,4726,DEBUG > APP NAME:test
+20160928103343,4726,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928103343,4726,DEBUG > APP IMPORT:app.test.run
+20160928103343,4726,DEBUG > APP NAME:test1
+20160928103343,4726,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928103343,4726,DEBUG > APP IMPORT:app.test1.run
+20160928103343,4726,DEBUG > New process:test1,pid:4727 start to work
+20160928103343,4727,DEBUG > New process:test3,pid:4728 start to work
+20160928103343,4728,INFO > test33333 working:1
+20160928103343,4727,DEBUG > New process:test4,pid:4729 start to work
+20160928103343,4729,INFO > test44444 working:1
+20160928103344,4728,INFO > test33333 working:2
+20160928103344,4729,INFO > test44444 working:2
+20160928103345,4728,INFO > test33333 working:3
+20160928103345,4729,INFO > test44444 working:3
+20160928103346,4729,INFO > test44444 working:4
+20160928103346,4728,INFO > test33333 working:4
+20160928103347,4729,INFO > test44444 working:5
+20160928103347,4728,INFO > test33333 working:5
+20160928103348,4728,INFO > test33333 working:6
+20160928103348,4729,INFO > test44444 working:6
+20160928103349,4728,INFO > test33333 working:7
+20160928103349,4729,INFO > test44444 working:7
+20160928103350,4729,INFO > test44444 working:8
+20160928103350,4728,INFO > test33333 working:8
+20160928103351,4729,INFO > test44444 working:9
+20160928103351,4728,INFO > test33333 working:9
+20160928103352,4729,INFO > test44444 working:10
+20160928103352,4728,INFO > test33333 working:10
+20160928103353,4729,INFO > test44444 working:11
+20160928103353,4728,INFO > test33333 working:11
+20160928103354,4729,INFO > test44444 working:12
+20160928103354,4728,INFO > test33333 working:12
+20160928103355,4729,INFO > test44444 working:13
+20160928103355,4728,INFO > test33333 working:13
+20160928103356,4729,INFO > test44444 working:14
+20160928103356,4728,INFO > test33333 working:14
+20160928103357,4729,INFO > test44444 working:15
+20160928103357,4728,INFO > test33333 working:15
+20160928103358,4729,INFO > test44444 working:16
+20160928103358,4728,INFO > test33333 working:16
+20160928103359,4729,INFO > test44444 working:17
+20160928103359,4728,INFO > test33333 working:17
+20160928103400,4729,INFO > test44444 working:18
+20160928103400,4728,INFO > test33333 working:18
+20160928103401,4729,INFO > test44444 working:19
+20160928103401,4728,INFO > test33333 working:19
+20160928103402,4729,INFO > test44444 working:20
+20160928103402,4728,INFO > test33333 working:20
+20160928103403,4729,INFO > test44444 working:21
+20160928103403,4728,INFO > test33333 working:21
+20160928103404,4728,INFO > test33333 working:22
+20160928103404,4729,INFO > test44444 working:22
+20160928103405,4728,INFO > test33333 working:23
+20160928103405,4729,INFO > test44444 working:23
+20160928103406,4729,INFO > test44444 working:24
+20160928103406,4728,INFO > test33333 working:24
+20160928103407,4728,INFO > test33333 working:25
+20160928103407,4729,INFO > test44444 working:25
+20160928103408,4728,INFO > test33333 working:26
+20160928103408,4729,INFO > test44444 working:26
+20160928103409,4728,INFO > test33333 working:27
+20160928103409,4729,INFO > test44444 working:27
+20160928103410,4729,INFO > test44444 working:28
+20160928103410,4728,INFO > test33333 working:28
+20160928103411,4729,INFO > test44444 working:29
+20160928103411,4728,INFO > test33333 working:29
+20160928103412,4728,INFO > test33333 working:30
+20160928103412,4729,INFO > test44444 working:30
+20160928103413,4729,ERROR > child process[name:test4,pid:4729] exit[0]
+20160928103413,4728,ERROR > child process[name:test3,pid:4728] exit[0]
+20160928103414,4727,DEBUG > process[name:test3,pid4728],run over.
+20160928103415,4727,DEBUG > process[name:test4,pid4729],run over.
+20160928103416,4727,ERROR > main process exit
+20160928103416,4727,ERROR > child process[name:test1,pid:4727] exit[0]
+20160928103417,4726,DEBUG > process[name:test1,pid4727],run over.
+20160928103418,4726,ERROR > main process exit
+20160928103418,4726,INFO > System exit!
+20160928103418,4726,INFO > -------------------- System running over --------------------
+20160928103420,4751,DEBUG > APP NAME:test
+20160928103420,4751,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928103420,4751,DEBUG > APP IMPORT:app.test.run
+20160928103420,4751,DEBUG > New process:test,pid:4752 start to work
+20160928103420,4752,DEBUG > New process:test1,pid:4753 start to work
+20160928103420,4753,INFO > test11111 working:1
+20160928103420,4752,DEBUG > New process:test2,pid:4755 start to work
+20160928103420,4755,INFO > test22222 working:1
+20160928103421,4755,INFO > test22222 working:2
+20160928103421,4753,INFO > test11111 working:2
+20160928103422,4753,INFO > test11111 working:3
+20160928103422,4755,INFO > test22222 working:3
+20160928103423,4755,INFO > test22222 working:4
+20160928103423,4753,INFO > test11111 working:4
+20160928103424,4753,INFO > test11111 working:5
+20160928103424,4755,INFO > test22222 working:5
+20160928103425,4753,INFO > test11111 working:6
+20160928103425,4755,INFO > test22222 working:6
+20160928103426,4753,INFO > test11111 working:7
+20160928103426,4755,INFO > test22222 working:7
+20160928103427,4753,INFO > test11111 working:8
+20160928103427,4755,INFO > test22222 working:8
+20160928103428,4753,INFO > test11111 working:9
+20160928103428,4755,INFO > test22222 working:9
+20160928103429,4755,INFO > test22222 working:10
+20160928103429,4753,INFO > test11111 working:10
+20160928103430,4753,INFO > test11111 working:11
+20160928103430,4755,INFO > test22222 working:11
+20160928103431,4753,INFO > test11111 working:12
+20160928103431,4755,INFO > test22222 working:12
+20160928103432,4753,INFO > test11111 working:13
+20160928103432,4755,INFO > test22222 working:13
+20160928103433,4753,INFO > test11111 working:14
+20160928103433,4755,INFO > test22222 working:14
+20160928103434,4753,INFO > test11111 working:15
+20160928103434,4755,INFO > test22222 working:15
+20160928103435,4755,INFO > test22222 working:16
+20160928103435,4753,INFO > test11111 working:16
+20160928103436,4753,INFO > test11111 working:17
+20160928103436,4755,INFO > test22222 working:17
+20160928103437,4755,INFO > test22222 working:18
+20160928103437,4753,INFO > test11111 working:18
+20160928103438,4755,INFO > test22222 working:19
+20160928103438,4753,INFO > test11111 working:19
+20160928103439,4753,INFO > test11111 working:20
+20160928103439,4755,INFO > test22222 working:20
+20160928103440,4753,INFO > test11111 working:21
+20160928103440,4755,INFO > test22222 working:21
+20160928103441,4753,INFO > test11111 working:22
+20160928103441,4755,INFO > test22222 working:22
+20160928103442,4753,INFO > test11111 working:23
+20160928103442,4755,INFO > test22222 working:23
+20160928103443,4753,INFO > test11111 working:24
+20160928103443,4755,INFO > test22222 working:24
+20160928103444,4755,INFO > test22222 working:25
+20160928103444,4753,INFO > test11111 working:25
+20160928103445,4755,INFO > test22222 working:26
+20160928103445,4753,INFO > test11111 working:26
+20160928103446,4753,INFO > test11111 working:27
+20160928103446,4755,INFO > test22222 working:27
+20160928103447,4755,INFO > test22222 working:28
+20160928103447,4753,INFO > test11111 working:28
+20160928103448,4753,INFO > test11111 working:29
+20160928103448,4755,INFO > test22222 working:29
+20160928103449,4755,INFO > test22222 working:30
+20160928103449,4753,INFO > test11111 working:30
+20160928103450,4755,ERROR > child process[name:test2,pid:4755] exit[0]
+20160928103450,4753,ERROR > child process[name:test1,pid:4753] exit[0]
+20160928103451,4752,DEBUG > process[name:test1,pid4753],run over.
+20160928103452,4752,DEBUG > process[name:test2,pid4755],run over.
+20160928103453,4752,ERROR > main process exit
+20160928103453,4752,ERROR > child process[name:test,pid:4752] exit[0]
+20160928103454,4751,DEBUG > process[name:test,pid4752],run over.
+20160928103455,4751,ERROR > main process exit
+20160928103455,4751,INFO > System exit!
+20160928103455,4751,INFO > -------------------- System running over --------------------
+20160928103458,4778,DEBUG > APP NAME:test
+20160928103458,4778,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928103458,4778,DEBUG > APP IMPORT:app.test.run
+20160928103458,4778,DEBUG > APP NAME:test1
+20160928103458,4778,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928103458,4778,DEBUG > APP IMPORT:app.test1.run
+20160928103458,4778,DEBUG > New process:test1,pid:4779 start to work
+20160928103458,4779,DEBUG > New process:test3,pid:4780 start to work
+20160928103458,4780,INFO > test33333 working:1
+20160928103458,4779,DEBUG > New process:test4,pid:4781 start to work
+20160928103458,4781,INFO > test44444 working:1
+20160928103459,4780,INFO > test33333 working:2
+20160928103459,4781,INFO > test44444 working:2
+20160928103500,4780,INFO > test33333 working:3
+20160928103500,4781,INFO > test44444 working:3
+20160928103501,4780,INFO > test33333 working:4
+20160928103501,4781,INFO > test44444 working:4
+20160928103502,4781,INFO > test44444 working:5
+20160928103502,4780,INFO > test33333 working:5
+20160928103503,4780,INFO > test33333 working:6
+20160928103503,4781,INFO > test44444 working:6
+20160928103504,4781,INFO > test44444 working:7
+20160928103504,4780,INFO > test33333 working:7
+20160928103505,4781,INFO > test44444 working:8
+20160928103505,4780,INFO > test33333 working:8
+20160928103506,4780,INFO > test33333 working:9
+20160928103506,4781,INFO > test44444 working:9
+20160928103507,4781,INFO > test44444 working:10
+20160928103507,4780,INFO > test33333 working:10
+20160928103508,4781,INFO > test44444 working:11
+20160928103508,4780,INFO > test33333 working:11
+20160928103509,4781,INFO > test44444 working:12
+20160928103509,4780,INFO > test33333 working:12
+20160928103510,4780,INFO > test33333 working:13
+20160928103510,4781,INFO > test44444 working:13
+20160928103511,4781,INFO > test44444 working:14
+20160928103511,4780,INFO > test33333 working:14
+20160928103512,4781,INFO > test44444 working:15
+20160928103512,4780,INFO > test33333 working:15
+20160928103513,4780,INFO > test33333 working:16
+20160928103513,4781,INFO > test44444 working:16
+20160928103514,4780,INFO > test33333 working:17
+20160928103514,4781,INFO > test44444 working:17
+20160928103515,4780,INFO > test33333 working:18
+20160928103515,4781,INFO > test44444 working:18
+20160928103516,4780,INFO > test33333 working:19
+20160928103516,4781,INFO > test44444 working:19
+20160928103517,4780,INFO > test33333 working:20
+20160928103517,4781,INFO > test44444 working:20
+20160928103518,4781,INFO > test44444 working:21
+20160928103518,4780,INFO > test33333 working:21
+20160928103519,4781,INFO > test44444 working:22
+20160928103519,4780,INFO > test33333 working:22
+20160928103520,4780,INFO > test33333 working:23
+20160928103520,4781,INFO > test44444 working:23
+20160928103521,4780,INFO > test33333 working:24
+20160928103521,4781,INFO > test44444 working:24
+20160928103522,4780,INFO > test33333 working:25
+20160928103522,4781,INFO > test44444 working:25
+20160928103523,4780,INFO > test33333 working:26
+20160928103523,4781,INFO > test44444 working:26
+20160928103524,4780,INFO > test33333 working:27
+20160928103524,4781,INFO > test44444 working:27
+20160928103525,4780,INFO > test33333 working:28
+20160928103525,4781,INFO > test44444 working:28
+20160928103526,4780,INFO > test33333 working:29
+20160928103526,4781,INFO > test44444 working:29
+20160928103527,4780,INFO > test33333 working:30
+20160928103527,4781,INFO > test44444 working:30
+20160928103528,4781,ERROR > child process[name:test4,pid:4781] exit[0]
+20160928103528,4780,ERROR > child process[name:test3,pid:4780] exit[0]
+20160928103529,4779,DEBUG > process[name:test3,pid4780],run over.
+20160928103530,4779,DEBUG > process[name:test4,pid4781],run over.
+20160928103531,4779,ERROR > main process exit
+20160928103531,4779,ERROR > child process[name:test1,pid:4779] exit[0]
+20160928103532,4778,DEBUG > process[name:test1,pid4779],run over.
+20160928103533,4778,ERROR > main process exit
+20160928103533,4778,INFO > System exit!
+20160928103533,4778,INFO > -------------------- System running over --------------------
+20160928103651,4795,DEBUG > APP NAME:test
+20160928103651,4795,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928103651,4795,DEBUG > APP IMPORT:app.test.run
+20160928103651,4795,DEBUG > APP NAME:test1
+20160928103651,4795,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928103651,4795,DEBUG > APP IMPORT:app.test1.run
+20160928103651,4795,DEBUG > New process:test1,pid:4796 start to work
+20160928103651,4796,DEBUG > New process:test3,pid:4797 start to work
+20160928103651,4797,INFO > test33333 working:1
+20160928103651,4796,DEBUG > New process:test4,pid:4798 start to work
+20160928103651,4798,INFO > test44444 working:1
+20160928103652,4797,INFO > test33333 working:2
+20160928103652,4798,INFO > test44444 working:2
+20160928103653,4797,INFO > test33333 working:3
+20160928103653,4798,INFO > test44444 working:3
+20160928103654,4798,INFO > test44444 working:4
+20160928103654,4797,INFO > test33333 working:4
+20160928103655,4797,INFO > test33333 working:5
+20160928103655,4798,INFO > test44444 working:5
+20160928103656,4797,INFO > test33333 working:6
+20160928103656,4798,INFO > test44444 working:6
+20160928103657,4798,INFO > test44444 working:7
+20160928103657,4797,INFO > test33333 working:7
+20160928103658,4798,INFO > test44444 working:8
+20160928103658,4797,INFO > test33333 working:8
+20160928103659,4797,INFO > test33333 working:9
+20160928103659,4798,INFO > test44444 working:9
+20160928103700,4797,INFO > test33333 working:10
+20160928103700,4798,INFO > test44444 working:10
+20160928103701,4798,INFO > test44444 working:11
+20160928103701,4797,INFO > test33333 working:11
+20160928103702,4798,INFO > test44444 working:12
+20160928103702,4797,INFO > test33333 working:12
+20160928103703,4797,INFO > test33333 working:13
+20160928103703,4798,INFO > test44444 working:13
+20160928103704,4798,INFO > test44444 working:14
+20160928103704,4797,INFO > test33333 working:14
+20160928103705,4797,INFO > test33333 working:15
+20160928103705,4798,INFO > test44444 working:15
+20160928103706,4797,INFO > test33333 working:16
+20160928103706,4798,INFO > test44444 working:16
+20160928103707,4798,INFO > test44444 working:17
+20160928103707,4797,INFO > test33333 working:17
+20160928103708,4798,INFO > test44444 working:18
+20160928103708,4797,INFO > test33333 working:18
+20160928103709,4797,INFO > test33333 working:19
+20160928103709,4798,INFO > test44444 working:19
+20160928103710,4798,INFO > test44444 working:20
+20160928103710,4797,INFO > test33333 working:20
+20160928103711,4797,INFO > test33333 working:21
+20160928103711,4798,INFO > test44444 working:21
+20160928103712,4798,INFO > test44444 working:22
+20160928103712,4797,INFO > test33333 working:22
+20160928103713,4797,INFO > test33333 working:23
+20160928103713,4798,INFO > test44444 working:23
+20160928103714,4797,INFO > test33333 working:24
+20160928103714,4798,INFO > test44444 working:24
+20160928103715,4797,INFO > test33333 working:25
+20160928103715,4798,INFO > test44444 working:25
+20160928103716,4797,INFO > test33333 working:26
+20160928103716,4798,INFO > test44444 working:26
+20160928103717,4798,INFO > test44444 working:27
+20160928103717,4797,INFO > test33333 working:27
+20160928103718,4798,INFO > test44444 working:28
+20160928103718,4797,INFO > test33333 working:28
+20160928103719,4797,INFO > test33333 working:29
+20160928103719,4798,INFO > test44444 working:29
+20160928103720,4798,INFO > test44444 working:30
+20160928103720,4797,INFO > test33333 working:30
+20160928103721,4798,ERROR > child process[name:test4,pid:4798] exit[0]
+20160928103721,4797,ERROR > child process[name:test3,pid:4797] exit[0]
+20160928103722,4796,DEBUG > process[name:test3,pid4797],run over.
+20160928103723,4796,DEBUG > process[name:test4,pid4798],run over.
+20160928103724,4796,ERROR > main process exit
+20160928103724,4796,ERROR > child process[name:test1,pid:4796] exit[0]
+20160928103725,4795,DEBUG > process[name:test1,pid4796],run over.
+20160928103726,4795,ERROR > main process exit
+20160928103726,4795,INFO > System exit!
+20160928103726,4795,INFO > -------------------- System running over --------------------
+20160928104045,4836,DEBUG > APP NAME:test
+20160928104045,4836,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104045,4836,DEBUG > APP IMPORT:app.test.run
+20160928104045,4836,DEBUG > APP NAME:test1
+20160928104045,4836,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104045,4836,DEBUG > APP IMPORT:app.test1.run
+20160928104045,4836,DEBUG > New process:test1,pid:4837 start to work
+20160928104045,4837,DEBUG > New process:test3-3,pid:4838 start to work
+20160928104045,4838,INFO > test33333 working:1
+20160928104045,4837,DEBUG > New process:test4-4,pid:4839 start to work
+20160928104045,4839,INFO > test44444 working:1
+20160928104046,4838,INFO > test33333 working:2
+20160928104046,4839,INFO > test44444 working:2
+20160928104047,4839,INFO > test44444 working:3
+20160928104047,4838,INFO > test33333 working:3
+20160928104048,4839,INFO > test44444 working:4
+20160928104048,4838,INFO > test33333 working:4
+20160928104049,4839,INFO > test44444 working:5
+20160928104049,4838,INFO > test33333 working:5
+20160928104050,4839,INFO > test44444 working:6
+20160928104050,4838,INFO > test33333 working:6
+20160928104051,4839,INFO > test44444 working:7
+20160928104051,4838,INFO > test33333 working:7
+20160928104052,4839,INFO > test44444 working:8
+20160928104052,4838,INFO > test33333 working:8
+20160928104053,4839,INFO > test44444 working:9
+20160928104053,4838,INFO > test33333 working:9
+20160928104054,4839,INFO > test44444 working:10
+20160928104054,4838,INFO > test33333 working:10
+20160928104055,4839,INFO > test44444 working:11
+20160928104055,4838,INFO > test33333 working:11
+20160928104056,4839,INFO > test44444 working:12
+20160928104056,4838,INFO > test33333 working:12
+20160928104057,4839,INFO > test44444 working:13
+20160928104057,4838,INFO > test33333 working:13
+20160928104058,4839,INFO > test44444 working:14
+20160928104058,4838,INFO > test33333 working:14
+20160928104059,4839,INFO > test44444 working:15
+20160928104059,4838,INFO > test33333 working:15
+20160928104100,4839,INFO > test44444 working:16
+20160928104100,4838,INFO > test33333 working:16
+20160928104101,4839,INFO > test44444 working:17
+20160928104101,4838,INFO > test33333 working:17
+20160928104102,4839,INFO > test44444 working:18
+20160928104102,4838,INFO > test33333 working:18
+20160928104110,4838,INFO > test33333 working:19
+20160928104110,4839,INFO > test44444 working:19
+20160928104111,4838,INFO > test33333 working:20
+20160928104111,4839,INFO > test44444 working:20
+20160928104112,4838,INFO > test33333 working:21
+20160928104112,4839,INFO > test44444 working:21
+20160928104113,4839,INFO > test44444 working:22
+20160928104113,4838,INFO > test33333 working:22
+20160928104114,4838,INFO > test33333 working:23
+20160928104114,4839,INFO > test44444 working:23
+20160928104115,4839,INFO > test44444 working:24
+20160928104115,4838,INFO > test33333 working:24
+20160928104116,4839,INFO > test44444 working:25
+20160928104116,4838,INFO > test33333 working:25
+20160928104117,4838,INFO > test33333 working:26
+20160928104117,4839,INFO > test44444 working:26
+20160928104153,4838,INFO > test33333 working:27
+20160928104153,4839,INFO > test44444 working:27
+20160928104154,4838,INFO > test33333 working:28
+20160928104154,4839,INFO > test44444 working:28
+20160928104155,4838,INFO > test33333 working:29
+20160928104155,4839,INFO > test44444 working:29
+20160928104156,4838,INFO > test33333 working:30
+20160928104156,4839,INFO > test44444 working:30
+20160928104157,4839,ERROR > child process[name:test4-4,pid:4839] exit[0]
+20160928104157,4838,ERROR > child process[name:test3-3,pid:4838] exit[0]
+20160928104157,4837,DEBUG > process[name:test3-3,pid4838],run over.
+20160928104158,4837,DEBUG > process[name:test4-4,pid4839],run over.
+20160928104159,4837,ERROR > main process exit
+20160928104159,4837,ERROR > child process[name:test1,pid:4837] exit[0]
+20160928104200,4836,DEBUG > process[name:test1,pid4837],run over.
+20160928104201,4836,ERROR > main process exit
+20160928104201,4836,INFO > System exit!
+20160928104201,4836,INFO > -------------------- System running over --------------------
+20160928104215,4873,DEBUG > APP NAME:test
+20160928104215,4873,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104215,4873,DEBUG > APP IMPORT:app.test.run
+20160928104215,4873,DEBUG > APP NAME:test1
+20160928104215,4873,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104215,4873,DEBUG > APP IMPORT:app.test1.run
+20160928104215,4873,DEBUG > New process:test1,pid:4874 start to work
+20160928104215,4874,DEBUG > New process:test3-3,pid:4875 start to work
+20160928104215,4875,INFO > test33333 working:1
+20160928104215,4874,DEBUG > New process:test4-4,pid:4876 start to work
+20160928104215,4876,INFO > test44444 working:1
+20160928104216,4875,INFO > test33333 working:2
+20160928104216,4876,INFO > test44444 working:2
+20160928104217,4875,INFO > test33333 working:3
+20160928104217,4876,INFO > test44444 working:3
+20160928104218,4875,INFO > test33333 working:4
+20160928104218,4876,INFO > test44444 working:4
+20160928104219,4875,INFO > test33333 working:5
+20160928104219,4876,INFO > test44444 working:5
+20160928104220,4875,INFO > test33333 working:6
+20160928104220,4876,INFO > test44444 working:6
+20160928104221,4875,INFO > test33333 working:7
+20160928104221,4876,INFO > test44444 working:7
+20160928104222,4875,INFO > test33333 working:8
+20160928104222,4876,INFO > test44444 working:8
+20160928104223,4875,INFO > test33333 working:9
+20160928104223,4876,INFO > test44444 working:9
+20160928104224,4875,INFO > test33333 working:10
+20160928104224,4876,INFO > test44444 working:10
+20160928104225,4875,ERROR > child process[name:test3-3,pid:4875] exit[0]
+20160928104225,4876,ERROR > child process[name:test4-4,pid:4876] exit[0]
+20160928104226,4874,DEBUG > process[name:test3-3,pid4875],run over.
+20160928104227,4874,DEBUG > process[name:test4-4,pid4876],run over.
+20160928104228,4874,ERROR > main process exit
+20160928104228,4874,ERROR > child process[name:test1,pid:4874] exit[0]
+20160928104229,4873,DEBUG > process[name:test1,pid4874],run over.
+20160928104230,4873,ERROR > main process exit
+20160928104230,4873,INFO > System exit!
+20160928104230,4873,INFO > -------------------- System running over --------------------
+20160928104348,4882,DEBUG > APP NAME:test
+20160928104348,4882,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104348,4882,DEBUG > APP IMPORT:app.test.run
+20160928104348,4882,DEBUG > APP NAME:test1
+20160928104348,4882,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104348,4882,DEBUG > APP IMPORT:app.test1.run
+20160928104348,4882,DEBUG > New process:test1,pid:4883 start to work
+20160928104348,4883,DEBUG > New process:test3-3,pid:4884 start to work
+20160928104348,4884,INFO > test33333 working:1
+20160928104348,4883,DEBUG > New process:test4-4,pid:4885 start to work
+20160928104348,4885,INFO > test44444 working:1
+20160928104349,4885,INFO > test44444 working:2
+20160928104349,4884,INFO > test33333 working:2
+20160928104350,4885,INFO > test44444 working:3
+20160928104350,4884,INFO > test33333 working:3
+20160928104351,4884,INFO > test33333 working:4
+20160928104351,4885,INFO > test44444 working:4
+20160928104352,4885,INFO > test44444 working:5
+20160928104352,4884,INFO > test33333 working:5
+20160928104353,4885,INFO > test44444 working:6
+20160928104353,4884,INFO > test33333 working:6
+20160928104354,4885,INFO > test44444 working:7
+20160928104354,4884,INFO > test33333 working:7
+20160928104355,4885,INFO > test44444 working:8
+20160928104355,4884,INFO > test33333 working:8
+20160928104356,4885,INFO > test44444 working:9
+20160928104356,4884,INFO > test33333 working:9
+20160928104357,4885,INFO > test44444 working:10
+20160928104357,4884,INFO > test33333 working:10
+20160928104358,4885,ERROR > child process[name:test4-4,pid:4885] exit[0]
+20160928104358,4884,ERROR > child process[name:test3-3,pid:4884] exit[0]
+20160928104359,4883,DEBUG > process[name:test3-3,pid4884],run over.
+20160928104400,4883,DEBUG > process[name:test4-4,pid4885],run over.
+20160928104401,4883,ERROR > main process exit
+20160928104401,4883,ERROR > child process[name:test1,pid:4883] exit[0]
+20160928104402,4882,DEBUG > process[name:test1,pid4883],run over.
+20160928104403,4882,ERROR > main process exit
+20160928104403,4882,INFO > System exit!
+20160928104403,4882,INFO > -------------------- System running over --------------------
+20160928104437,4889,DEBUG > APP NAME:test
+20160928104437,4889,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104437,4889,DEBUG > APP IMPORT:app.test.run
+20160928104437,4889,DEBUG > APP NAME:test1
+20160928104437,4889,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104437,4889,DEBUG > APP IMPORT:app.test1.run
+20160928104437,4889,ERROR > mpServer instance has no attribute 'pCount'
+20160928104437,4889,INFO > [main] call children shutdown
+20160928104446,4890,DEBUG > APP NAME:test
+20160928104446,4890,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104446,4890,DEBUG > APP IMPORT:app.test.run
+20160928104446,4890,DEBUG > APP NAME:test1
+20160928104446,4890,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104446,4890,DEBUG > APP IMPORT:app.test1.run
+20160928104446,4890,DEBUG > New process:test1,pid:4891 start to work
+20160928104446,4891,DEBUG > New process:test3-3,pid:4892 start to work
+20160928104446,4892,INFO > test33333 working:1
+20160928104446,4891,DEBUG > New process:test4-4,pid:4893 start to work
+20160928104446,4893,INFO > test44444 working:1
+20160928104447,4893,INFO > test44444 working:2
+20160928104447,4892,INFO > test33333 working:2
+20160928104448,4892,INFO > test33333 working:3
+20160928104448,4893,INFO > test44444 working:3
+20160928104449,4893,INFO > test44444 working:4
+20160928104449,4892,INFO > test33333 working:4
+20160928104450,4893,INFO > test44444 working:5
+20160928104450,4892,INFO > test33333 working:5
+20160928104451,4893,INFO > test44444 working:6
+20160928104451,4892,INFO > test33333 working:6
+20160928104452,4893,INFO > test44444 working:7
+20160928104452,4892,INFO > test33333 working:7
+20160928104453,4892,INFO > test33333 working:8
+20160928104453,4893,INFO > test44444 working:8
+20160928104454,4893,INFO > test44444 working:9
+20160928104454,4892,INFO > test33333 working:9
+20160928104455,4893,INFO > test44444 working:10
+20160928104455,4892,INFO > test33333 working:10
+20160928104456,4893,ERROR > child process[name:test4-4,pid:4893] exit[0]
+20160928104456,4892,ERROR > child process[name:test3-3,pid:4892] exit[0]
+20160928104457,4891,DEBUG > process[name:test3-3,pid4892],run over.
+20160928104458,4891,DEBUG > process[name:test4-4,pid4893],run over.
+20160928104459,4891,ERROR > main process exit
+20160928104459,4891,ERROR > child process[name:test1,pid:4891] exit[0]
+20160928104500,4890,DEBUG > process[name:test1,pid4891],run over.
+20160928104501,4890,ERROR > main process exit
+20160928104501,4890,INFO > System exit!
+20160928104501,4890,INFO > -------------------- System running over --------------------
+20160928104539,4896,DEBUG > APP NAME:test
+20160928104539,4896,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104539,4896,DEBUG > APP IMPORT:app.test.run
+20160928104539,4896,DEBUG > APP NAME:test1
+20160928104539,4896,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104539,4896,DEBUG > APP IMPORT:app.test1.run
+20160928104539,4896,DEBUG > New process:test,pid:4897 start to work
+20160928104539,4896,DEBUG > New process:test1,pid:4899 start to work
+20160928104539,4897,DEBUG > New process:test1-1,pid:4898 start to work
+20160928104539,4898,INFO > test11111 working:1
+20160928104539,4899,DEBUG > New process:test3-3,pid:4900 start to work
+20160928104539,4900,INFO > test33333 working:1
+20160928104539,4897,DEBUG > New process:test2-2,pid:4901 start to work
+20160928104539,4899,DEBUG > New process:test4-4,pid:4902 start to work
+20160928104539,4901,INFO > test22222 working:1
+20160928104539,4902,INFO > test44444 working:1
+20160928104540,4898,INFO > test11111 working:2
+20160928104540,4900,INFO > test33333 working:2
+20160928104540,4901,INFO > test22222 working:2
+20160928104540,4902,INFO > test44444 working:2
+20160928104541,4898,INFO > test11111 working:3
+20160928104541,4900,INFO > test33333 working:3
+20160928104541,4902,INFO > test44444 working:3
+20160928104541,4901,INFO > test22222 working:3
+20160928104542,4898,INFO > test11111 working:4
+20160928104542,4900,INFO > test33333 working:4
+20160928104542,4901,INFO > test22222 working:4
+20160928104542,4902,INFO > test44444 working:4
+20160928104543,4898,INFO > test11111 working:5
+20160928104543,4902,INFO > test44444 working:5
+20160928104543,4901,INFO > test22222 working:5
+20160928104543,4900,INFO > test33333 working:5
+20160928104544,4898,INFO > test11111 working:6
+20160928104544,4902,INFO > test44444 working:6
+20160928104544,4901,INFO > test22222 working:6
+20160928104544,4900,INFO > test33333 working:6
+20160928104549,4900,INFO > test33333 working:7
+20160928104549,4902,INFO > test44444 working:7
+20160928104549,4898,INFO > test11111 working:7
+20160928104549,4901,INFO > test22222 working:7
+20160928104550,4902,INFO > test44444 working:8
+20160928104550,4898,INFO > test11111 working:8
+20160928104550,4900,INFO > test33333 working:8
+20160928104550,4901,INFO > test22222 working:8
+20160928104551,4898,INFO > test11111 working:9
+20160928104551,4900,INFO > test33333 working:9
+20160928104551,4901,INFO > test22222 working:9
+20160928104551,4902,INFO > test44444 working:9
+20160928104552,4898,INFO > test11111 working:10
+20160928104552,4901,INFO > test22222 working:10
+20160928104552,4902,INFO > test44444 working:10
+20160928104552,4900,INFO > test33333 working:10
+20160928104553,4901,ERROR > child process[name:test2-2,pid:4901] exit[0]
+20160928104553,4902,ERROR > child process[name:test4-4,pid:4902] exit[0]
+20160928104553,4900,ERROR > child process[name:test3-3,pid:4900] exit[0]
+20160928104553,4898,ERROR > child process[name:test1-1,pid:4898] exit[0]
+20160928104553,4897,DEBUG > process[name:test1-1,pid4898],run over.
+20160928104553,4899,DEBUG > process[name:test3-3,pid4900],run over.
+20160928104554,4899,DEBUG > process[name:test4-4,pid4902],run over.
+20160928104554,4897,DEBUG > process[name:test2-2,pid4901],run over.
+20160928104555,4897,ERROR > main process exit
+20160928104555,4899,ERROR > main process exit
+20160928104555,4899,ERROR > child process[name:test1,pid:4899] exit[0]
+20160928104555,4897,ERROR > child process[name:test,pid:4897] exit[0]
+20160928104556,4896,DEBUG > process[name:test,pid4897],run over.
+20160928104557,4896,DEBUG > process[name:test1,pid4899],run over.
+20160928104558,4896,ERROR > main process exit
+20160928104558,4896,INFO > System exit!
+20160928104558,4896,INFO > -------------------- System running over --------------------
+20160928104609,4913,DEBUG > APP NAME:test
+20160928104609,4913,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test/run.py
+20160928104609,4913,DEBUG > APP IMPORT:app.test.run
+20160928104609,4913,DEBUG > APP NAME:test1
+20160928104609,4913,DEBUG > APP FILE:/home/liangrt/app/app-sim/src/app/test1/run.py
+20160928104609,4913,DEBUG > APP IMPORT:app.test1.run
+20160928104609,4913,DEBUG > New process:test,pid:4914 start to work
+20160928104609,4913,DEBUG > New process:test1,pid:4916 start to work
+20160928104609,4914,DEBUG > New process:test1-1,pid:4915 start to work
+20160928104609,4916,DEBUG > New process:test3-3,pid:4917 start to work
+20160928104609,4915,INFO > test11111 working:1
+20160928104609,4917,INFO > test33333 working:1
+20160928104609,4914,DEBUG > New process:test2-2,pid:4918 start to work
+20160928104609,4916,DEBUG > New process:test4-4,pid:4919 start to work
+20160928104609,4918,INFO > test22222 working:1
+20160928104609,4919,INFO > test44444 working:1
+20160928104610,4915,INFO > test11111 working:2
+20160928104610,4917,INFO > test33333 working:2
+20160928104610,4919,INFO > test44444 working:2
+20160928104610,4918,INFO > test22222 working:2
+20160928104611,4919,INFO > test44444 working:3
+20160928104611,4915,INFO > test11111 working:3
+20160928104611,4918,INFO > test22222 working:3
+20160928104611,4917,INFO > test33333 working:3
+20160928104612,4918,INFO > test22222 working:4
+20160928104612,4915,INFO > test11111 working:4
+20160928104612,4917,INFO > test33333 working:4
+20160928104612,4919,INFO > test44444 working:4
+20160928104613,4918,INFO > test22222 working:5
+20160928104613,4917,INFO > test33333 working:5
+20160928104613,4915,INFO > test11111 working:5
+20160928104613,4919,INFO > test44444 working:5
+20160928104614,4917,INFO > test33333 working:6
+20160928104614,4918,INFO > test22222 working:6
+20160928104614,4915,INFO > test11111 working:6
+20160928104614,4919,INFO > test44444 working:6
+20160928104615,4918,INFO > test22222 working:7
+20160928104615,4917,INFO > test33333 working:7
+20160928104615,4915,INFO > test11111 working:7
+20160928104615,4919,INFO > test44444 working:7
+20160928104616,4917,INFO > test33333 working:8
+20160928104616,4918,INFO > test22222 working:8
+20160928104616,4915,INFO > test11111 working:8
+20160928104616,4919,INFO > test44444 working:8
+20160928104617,4915,INFO > test11111 working:9
+20160928104617,4918,INFO > test22222 working:9
+20160928104617,4919,INFO > test44444 working:9
+20160928104617,4917,INFO > test33333 working:9
+20160928104618,4917,INFO > test33333 working:10
+20160928104618,4919,INFO > test44444 working:10
+20160928104618,4918,INFO > test22222 working:10
+20160928104618,4915,INFO > test11111 working:10
+20160928104619,4915,INFO > test11111 working:11
+20160928104619,4919,INFO > test44444 working:11
+20160928104619,4918,INFO > test22222 working:11
+20160928104619,4917,INFO > test33333 working:11
+20160928104620,4915,INFO > test11111 working:12
+20160928104620,4918,INFO > test22222 working:12
+20160928104620,4919,INFO > test44444 working:12
+20160928104620,4917,INFO > test33333 working:12
+20160928104621,4919,INFO > test44444 working:13
+20160928104621,4917,INFO > test33333 working:13
+20160928104621,4915,INFO > test11111 working:13
+20160928104621,4918,INFO > test22222 working:13
+20160928104622,4917,INFO > test33333 working:14
+20160928104622,4918,INFO > test22222 working:14
+20160928104622,4915,INFO > test11111 working:14
+20160928104622,4919,INFO > test44444 working:14
+20160928104623,4918,INFO > test22222 working:15
+20160928104623,4917,INFO > test33333 working:15
+20160928104623,4919,INFO > test44444 working:15
+20160928104623,4915,INFO > test11111 working:15
+20160928104624,4918,INFO > test22222 working:16
+20160928104624,4919,INFO > test44444 working:16
+20160928104624,4917,INFO > test33333 working:16
+20160928104624,4915,INFO > test11111 working:16
+20160928104625,4917,INFO > test33333 working:17
+20160928104625,4915,INFO > test11111 working:17
+20160928104625,4918,INFO > test22222 working:17
+20160928104625,4919,INFO > test44444 working:17
+20160928104626,4915,INFO > test11111 working:18
+20160928104626,4917,INFO > test33333 working:18
+20160928104626,4919,INFO > test44444 working:18
+20160928104626,4918,INFO > test22222 working:18
+20160928104627,4918,INFO > test22222 working:19
+20160928104627,4917,INFO > test33333 working:19
+20160928104627,4919,INFO > test44444 working:19
+20160928104627,4915,INFO > test11111 working:19
+20160928104628,4917,INFO > test33333 working:20
+20160928104628,4919,INFO > test44444 working:20
+20160928104628,4915,INFO > test11111 working:20
+20160928104628,4918,INFO > test22222 working:20
+20160928104629,4918,INFO > test22222 working:21
+20160928104629,4915,INFO > test11111 working:21
+20160928104629,4919,INFO > test44444 working:21
+20160928104629,4917,INFO > test33333 working:21
+20160928104630,4919,INFO > test44444 working:22
+20160928104630,4918,INFO > test22222 working:22
+20160928104630,4915,INFO > test11111 working:22
+20160928104630,4917,INFO > test33333 working:22
+20160928104631,4919,INFO > test44444 working:23
+20160928104631,4915,INFO > test11111 working:23
+20160928104631,4918,INFO > test22222 working:23
+20160928104631,4917,INFO > test33333 working:23
+20160928104632,4918,INFO > test22222 working:24
+20160928104632,4919,INFO > test44444 working:24
+20160928104632,4917,INFO > test33333 working:24
+20160928104632,4915,INFO > test11111 working:24
+20160928104633,4918,INFO > test22222 working:25
+20160928104633,4915,INFO > test11111 working:25
+20160928104633,4917,INFO > test33333 working:25
+20160928104633,4919,INFO > test44444 working:25
+20160928104634,4919,INFO > test44444 working:26
+20160928104634,4915,INFO > test11111 working:26
+20160928104634,4917,INFO > test33333 working:26
+20160928104634,4918,INFO > test22222 working:26
+20160928104635,4918,INFO > test22222 working:27
+20160928104635,4915,INFO > test11111 working:27
+20160928104635,4919,INFO > test44444 working:27
+20160928104635,4917,INFO > test33333 working:27
+20160928104636,4917,INFO > test33333 working:28
+20160928104636,4919,INFO > test44444 working:28
+20160928104636,4918,INFO > test22222 working:28
+20160928104636,4915,INFO > test11111 working:28
+20160928104637,4918,INFO > test22222 working:29
+20160928104637,4919,INFO > test44444 working:29
+20160928104637,4917,INFO > test33333 working:29
+20160928104637,4915,INFO > test11111 working:29
+20160928104638,4915,INFO > test11111 working:30
+20160928104638,4917,INFO > test33333 working:30
+20160928104638,4919,INFO > test44444 working:30
+20160928104638,4918,INFO > test22222 working:30
+20160928104639,4918,ERROR > child process[name:test2-2,pid:4918] exit[0]
+20160928104639,4917,ERROR > child process[name:test3-3,pid:4917] exit[0]
+20160928104639,4915,ERROR > child process[name:test1-1,pid:4915] exit[0]
+20160928104639,4919,ERROR > child process[name:test4-4,pid:4919] exit[0]
+20160928104640,4914,DEBUG > process[name:test1-1,pid4915],run over.
+20160928104640,4916,DEBUG > process[name:test3-3,pid4917],run over.
+20160928104641,4914,DEBUG > process[name:test2-2,pid4918],run over.
+20160928104641,4916,DEBUG > process[name:test4-4,pid4919],run over.
+20160928104642,4914,ERROR > main process exit
+20160928104642,4916,ERROR > main process exit
+20160928104642,4916,ERROR > child process[name:test1,pid:4916] exit[0]
+20160928104642,4914,ERROR > child process[name:test,pid:4914] exit[0]
+20160928104643,4913,DEBUG > process[name:test,pid4914],run over.
+20160928104644,4913,DEBUG > process[name:test1,pid4916],run over.
+20160928104645,4913,ERROR > main process exit
+20160928104645,4913,INFO > System exit!
+20160928104645,4913,INFO > -------------------- System running over --------------------

@@ -29,57 +29,66 @@ from lib.core.cmdLine import cmdLineParser
 from lib.core.enum import SYS
 
 
-def lookupApp(startName):
-    fileList = []
-    try: 
-        for f in os.listdir(paths.APP_PATH):
-            if os.path.isdir(os.path.join(paths.APP_PATH,f)):
-                appfile = os.path.join(paths.APP_PATH,f,"run.py")
-                if os.path.isfile(appfile):
-                    fileList.append({f:appfile})
+def lookupApp():
+    for app in conf.apps:
+        fileList = []
+        try: 
+            for f in os.listdir(paths.APP_PATH):
+                if os.path.isdir(os.path.join(paths.APP_PATH,f)):
+                    appfile = os.path.join(paths.APP_PATH,f,"run.py")
+                    if os.path.isfile(appfile):
+                        fileList.append({f:appfile})
 
-        for apps in fileList:
-            if startName in apps.keys():
-                conf.app.file = apps[startName]
-                conf.app.imp = "app." + str(conf.app.name) + ".run"
+            for file in fileList:
+                if app.name in file.keys():
+                    app.file = file[app.name]
+                    app.imp = "app." + str(app.name) + ".run"
 
-        logger.debug("APP NAME:{0}".format(conf.app.name))
-        logger.debug("APP FILE:{0}".format(conf.app.file))
-        logger.debug("APP IMPORT:{0}".format(conf.app.imp))
-    except Exception,e:
-        raise AppLookupException(str(e))
+            logger.debug("APP NAME:{0}".format(app.name))
+            logger.debug("APP FILE:{0}".format(app.file))
+            logger.debug("APP IMPORT:{0}".format(app.imp))
+        except Exception,e:
+            raise AppLookupException(str(e))
 
 
 def addApp():
-    try:
-        module = __import__(conf.app.imp, globals(), locals(), "main")
-        conf.app.func = getattr(module, "main", None)
-        conf.app.if_runForever = getattr(module, "if_runForever",None)
-    except Exception,e:
-       raise AppLoadException(str(e))
+    for app in conf.apps:
+        try:
+            module = __import__(app.imp, globals(), locals(), "main")
+            app.func = getattr(module, "main", None)
+            app.if_runForever = getattr(module, "if_runForever",None)
+        except Exception,e:
+           raise AppLoadException(str(e))
 
 def checkEnv():
-    if not conf.app.name:
-        print "app name is empty can't load"
-        raise AppLoadException("app name is empty can't load")
-    pass
+    for app in conf.apps:
+        if not app.name:
+            print "app name is empty can't load"
+            raise AppLoadException("app name is empty can't load")
 
 def initApp():
-    conf.app = AttribDict()
-    conf.app.file = None
-    conf.app.imp = None
-    conf.app.func =	None
-    conf.app.name = SYS.APP
-    conf.app.if_runForever = False
-    #conf.app.runModule = None
+    conf.apps = []
+    for app_name in SYS.APP:
+        app = AttribDict()
+        app.file = None
+        app.imp = None
+        app.func =	None
+        app.name = app_name
+        app.if_runForever = False
+
+        conf.apps.append(app)
 
 def runAppProcess():
-    appProcess = [
-        (conf.app.func,conf.app.name,()),
-    ]
-    a = mpServer(appProcess,conf.app.if_runForever,conf.app.name)
-    a.run()
+    appProcess = []
 
+    for app in conf.apps:
+        print app.name
+        appProcess.append(
+            (app.func,app.if_runForever,app.name,()),
+        )
+
+    a = mpServer(appProcess)
+    a.run()
 
 def call_child_shutdown(signum):
     logger.info("[main] call children shutdown")
@@ -121,11 +130,12 @@ def main():
 
         setPaths()
         checkEnv()
-        lookupApp(conf.app.name)
-        if not conf.app.imp:
-            errMessage = "can not import app"
-            logger.error(errMessage)
-            sys.exit(1)
+        lookupApp()
+        for app in conf.apps:
+            if not app.imp:
+                errMessage = "can not import app"
+                logger.error(errMessage)
+                sys.exit(1)
         addApp()
 
         runAppProcess()
