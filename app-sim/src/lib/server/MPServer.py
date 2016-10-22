@@ -24,6 +24,9 @@ sys.path.append("../../")
 from lib.core.datatype import AttribDict
 from lib.core.data import logger
 from lib.core.exception import ServerException
+from lib.core import exception
+
+MYEXITCODE = 126
 
 class mpServer:
     def __init__(self,funcList,if_runForever=False,myselfname=""):
@@ -67,38 +70,48 @@ class mpServer:
                 logger.error(errMessage)
                 raise ServerException(errMessage)
         
-        self.check_serve()
 
     def start_process(self,obj,*arg):
         w = Process(target=obj.run,args=obj.args,name=obj.name)
         w.start()
-        logger.debug("New process:{0},pid:{1} start to work".format(w.name,w.pid))
+        logger.info("APP process:[{0},pid:{1}],START! ".format(w.name,w.pid))
         return w
 
     def check_serve(self):
+        returnCode = 0
         while not self.children_exit_flag:
+            returnCode = 0
             for obj in self._processList:
                 #正常退出，删除子进程
-                if not obj.process.exitcode and obj.process.exitcode == 0:
-                    if obj.process.exitcode == 0:
-                        logger.debug("process[name:{0},pid{1}],run over.".format(obj.process.name,obj.process.pid))
-                        for pid,process in self.children.items():
-                            if obj.process.pid == pid:
-                                self.children.pop(pid)
-                                self._processList.remove(obj)
-                        if not len(self.children):
-                            self.children_exit_flag = True
-                #异常退出，重启子进程
-                elif obj.process.exitcode:
+                exitcode = obj.process.exitcode
+
+                if (not exitcode and exitcode == 0) or exitcode == MYEXITCODE:
+                    returnCode += exitcode
+                    Message = "APP process[{0},pid{1}],STOP.".format(obj.process.name,obj.process.pid)
+                    if exitcode == 0:
+                        logger.warning(Message)
+                    elif exitcode == MYEXITCODE:
+                        logger.error(Message)
+
                     for pid,process in self.children.items():
                         if obj.process.pid == pid:
+                            self.children.pop(pid)
+                            self._processList.remove(obj)
+                    if not len(self.children):
+                        self.children_exit_flag = True
+                #异常退出，重启子进程
+                elif obj.process.exitcode:
+                    returnCode += exitcode
+                    for pid,process in self.children.items():
+                        if obj.process.pid == pid:
+                            logger.error("process name:{0},pid:{1}] is down,need RESTART!".format(obj.name,obj.pid,))
+
                             self.children.pop(pid)
 
                             w = self.start_process(obj)
                             self.children[w.pid] = w
                             obj.process = w
                             obj.pid = w.pid
-                            logger.error("process name:{0},pid:{1}] is down,need restart,new pid:{2}".format(obj.name,obj.pid,w.pid))
                 else:
                     #logger.info("process[name:{0},pid:{1}],running normal".format(obj.process.name,obj.process.pid))
                     pass
@@ -107,7 +120,8 @@ class mpServer:
                 self.children_exit_flag = True
             time.sleep(1)
 
-        logger.error("main process exit")
+        #logger.warning("MPserver recv children exit singal,exited.")
+        return returnCode
 
 
     def set_signal(self):
@@ -165,18 +179,38 @@ class app(mpServer):
     def run(self,*args):
         self.exitcode = 0
         self.set_signal()
-        if self._runForever:
-            while(self._runForever):
+        try:
+            if self._runForever:
+                while(self._runForever):
+                    self.func(*args)
+                    time.sleep(1)
+            else:
                 self.func(*args)
-                time.sleep(1)
-        else:
-            self.func(*args)
 
-        logger.error("child process[name:{0},pid:{1}] exit[{2}]".format(self.name,os.getpid(),self.exitcode))
-        sys.exit(self.exitcode)
+            Message = "APP process:[{0},pid:{1}] exit[{2}]".format(self.name,os.getpid(),self.exitcode)
+
+            if(self.exitcode):
+                logger.error(Message)
+            else:
+                logger.warning(Message) 
+            sys.exit(self.exitcode)
+
+        #except Exception as e:
+            #if hasattr(exception,e.__class__.__name__):
+                #self.exitcode = MYEXITCODE
+                #sys.exit(self.exitcode)
+
+        except(
+                exception.ExceShellCommandException,
+                exception.ServerException,
+                exception.TcpServerException
+            ) as e:
+            self.exitcode = MYEXITCODE
+            sys.exit(self.exitcode)
+
 
     def shutdown(self,signum,frame):
-        logger.error("child process[name:{0},pid:{1}] get exit code:{2}".format(self.name,os.getpid(),signum))
+        logger.error("APP process:[:{0},pid:{1}] get exit code:{2}".format(self.name,os.getpid(),signum))
         logger.error("waitting for func running over")
         self._runForever = False
         self.exitcode = signum

@@ -82,13 +82,13 @@ def runAppProcess():
     appProcess = []
 
     for app in conf.apps:
-        print app.name
         appProcess.append(
             (app.func,app.if_runForever,app.name,()),
         )
 
     a = mpServer(appProcess)
     a.run()
+    return a
 
 def call_child_shutdown(signum):
     logger.info("[main] call children shutdown")
@@ -123,6 +123,7 @@ def set_signal():
 
 def main():
     #set_signal()
+    mp = None
     try:
         initApp()
         #判断是否转换到后台执行
@@ -138,13 +139,7 @@ def main():
                 sys.exit(1)
         addApp()
 
-        runAppProcess()
-        #conf.app.func()
-
-        logger.info("System exit!")
-        logger.info("-"*20 +" System running over "+"-"*20)
-        sys.exit(0)
-        logger.info("liangrttttttt")
+        mp = runAppProcess()
 
     except AppBaseException as ex:
         logger.error(str(ex))
@@ -157,5 +152,16 @@ def main():
         logger.error(str(e))
         call_child_shutdown(0)
         sys.exit(1)
+
+    exitcode = mp.check_serve()
+    a = "System exit!"
+    b = "-"*20 +" System running over "+"-"*20
+    if not exitcode:
+        logger.info(a)
+        logger.info(b)
+    else:
+        logger.error(a)
+        logger.error(b)
+    sys.exit(exitcode)
 
 

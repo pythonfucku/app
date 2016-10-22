@@ -13,8 +13,11 @@
 #=============================================================================
 '''
 import os,fcntl,sys
+import subprocess
+import shutil
 
 from lib.core.exception import AppBaseException
+from lib.core.exception import ExceShellCommandException
 from lib.core.enum import SYS
 from lib.core.data import logger
 from lib.core.data import paths
@@ -101,3 +104,34 @@ def detachProcess():
     file(SYS.LOCK_FILE,'w+').write("%s\n" % pid)
 
     logger.info("-"*20 +" System start running on backgrounder,pid:{0}".format(pid) +"-"*20) 
+
+     
+
+def shell(command):
+    args = ['bash','-c',command]
+    logger.info("Exec command:{0}".format(args))
+
+    output = ""
+    subp = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    return_code = subp.wait()
+    if return_code:
+        err = subp.stderr.read()
+        logger.error("Exec command error,code:{0}".format(return_code))
+        logger.error("{0}".format(err))
+        raise ExceShellCommandException(err)
+
+        
+    return output
+        
+        
+def cp(src,dest):
+    return shell("cp -rf "+ src + " " + dest)
+
+
+def mv(src,dest):
+    return shell("mv "+ src + " " + dest)
+
+
+
+

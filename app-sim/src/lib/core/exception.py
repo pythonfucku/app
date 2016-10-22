@@ -22,14 +22,10 @@ class AppLookupException(AppBaseException):
 class AppLoadException(AppBaseException):
 	pass
 
-#---------------------------------------------------------------
+#--------------------------------------------------------------
+class ExceShellCommandException(Exception):
+    pass
 
-class ZoomeyeBaseException(Exception):
-	pass
-
-
-class ZoomeyeSearchException(ZoomeyeBaseException):
-	pass
 
 #--------------------------------------------------------------
 class ServerException(Exception):

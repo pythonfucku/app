@@ -17,6 +17,8 @@ import time,signal,sys
 from lib.core.data import logger
 from lib.server.MPServer import mpServer
 
+from lib.core import common 
+
 def test1(j,a):
     i = 0
     processes = [
@@ -37,8 +39,18 @@ def test2(j,a):
 if_runForever = False
 
 def main():   
-    a = testapp()
-    a.main()
+    #a = testapp()
+    #a.main()
+
+
+
+    #stdout= shell("iiostat 2 2")
+    #print stdout
+
+    print common.cp("b","c")
+
+
+
 
 class testapp():
     processes = [
