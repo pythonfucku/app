@@ -20,6 +20,18 @@ from logging.handlers import RotatingFileHandler
 from lib.core.enum import SYS
 from lib.core.cmdLine import cmdLineParser
 
+class ColorFormatter(logging.Formatter):
+    def format(self, record):
+        if record.levelno == logging.WARNING:
+            record.msg = '\033[93m%s\033[0m' % record.msg
+        elif record.levelno == logging.ERROR:
+            record.msg = '\033[91m%s\033[0m' % record.msg
+        elif record.levelno == logging.DEBUG:
+            record.msg = '\033[92ms%s\033[0m' % record.msg
+
+        return logging.Formatter.format(self, record)
+
+
 try:
     conf = ConfigParser.ConfigParser()
     conf.read(SYS.CONF_FILE)
@@ -47,7 +59,12 @@ for tmp in SYS.APP:
 cmdLineParser()
 #-------------------------------
 
-FORMAT = logging.Formatter("%(asctime)s,%(process)d,%(levelname)s > %(message)s",DATA_TYPE)
+log_format = "%(asctime)s,%(process)d,%(levelname)s > %(message)s"
+time_format = DATA_TYPE
+FORMAT = ColorFormatter(log_format,datefmt=time_format)
+
+
+#FORMAT = logging.Formatter("%(asctime)s,%(process)d,%(levelname)s > %(message)s",DATA_TYPE)
 LOG_NAME = SYS.LOG_FILE
 
 LOGGER = logging.getLogger(LOG_NAME)
@@ -66,8 +83,6 @@ if SYS.RUN_MODULE >=1:
     LOGGER_HANDLER = logging.StreamHandler(sys.stdout)
     LOGGER_HANDLER.setFormatter(FORMAT)
     LOGGER.addHandler(LOGGER_HANDLER)
-
-
 
 
 
