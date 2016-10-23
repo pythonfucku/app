@@ -23,7 +23,7 @@ python的多进程框架，LINUX版，功能包括：
 
 
 
-Change Log：
+CHANGE LOG：
 
 
         2016-10-23 16:06:23   
@@ -31,5 +31,6 @@ Change Log：
                 2.增加前台日志输出颜色
                 3.增加shell命令接口，命令包括：bash任何命令，cp，mv，scp，rscp，rrscp，psdh
         
-        2016年10月18日13:51:36   增加github模块
+        2016年10月18日13:51:36   
+                1.增加github模块
        
