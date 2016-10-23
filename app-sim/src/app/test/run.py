@@ -44,10 +44,9 @@ def main():
 
 
 
-    #stdout= shell("iiostat 2 2")
-    #print stdout
+    print  common.bash("iostat 2 2")
 
-    print common.cp("b","c")
+    #print common.cp("b","c")
 
 
 

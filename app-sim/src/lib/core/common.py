@@ -105,33 +105,61 @@ def detachProcess():
 
     logger.info("-"*20 +" System start running on backgrounder,pid:{0}".format(pid) +"-"*20) 
 
-     
 
-def shell(command):
-    args = ['bash','-c',command]
+def print_exce_command(args):
     logger.info("Exec command:{0}".format(args))
 
-    output = ""
-    subp = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+def print_err_exce_command(code,stderr):
+    logger.error("Exec command error,code:{0}".format(code))
+    logger.error("{0}".format(stderr))
 
-    return_code = subp.wait()
-    if return_code:
-        err = subp.stderr.read()
-        logger.error("Exec command error,code:{0}".format(return_code))
-        logger.error("{0}".format(err))
-        raise ExceShellCommandException(err)
+def base_shell(args):
+    print_exce_command(args)
+    p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
+    stdout, stderr = p.communicate()
+    
+    if stderr:
+        print_err_exce_command(p.returncode,stderr)
+        raise ExceShellCommandException(stderr)
 
+    return stdout
+
+def bash(command):
+    args = ['bash','-c',command]
+    return base_shell(args)
         
-    return output
         
-        
-def cp(src,dest):
-    return shell("cp -rf "+ src + " " + dest)
+def cp(localfile,remotefile):
+    args = ['cp', '-rf', localfile,remotefile]
+    base_shell(args)
 
 
 def mv(src,dest):
-    return shell("mv "+ src + " " + dest)
+    args = ['mv',src,dest]
+    base_shell(args)
+
+def scp(user,node,localfile,remotefile):
+    #local to remote
+    args = ['scp','-oConnectTimeout=15','-r',localfile, '%s@%s:%s' % (user,node,remotefile)]
+    base_shell(args)
+
+def rscp(user,node,localfile,remotefile):
+    #remote to local
+    args = ['scp','-oConnectTimeout=15','-r', '%s@%s:%s' % (user,node,remotefile),localfile]
+    base_shell(args)
+
+def rrscp(user,node1,node1_file,node2,node2_file):
+    args = ['scp','-oConnectTimeout=15','r', '%s@%s:%s' % (user,nodel1,nodel_file), '%s@%s:%s' % (user,node2,node2_file)]
+    base_shell(args)
+
+def pdsh(user,nodes,command):
+    # many nodes,so nodes must to be list
+    _nodes = []
+    for node in nodes:
+        _nodes.append("%s@%s" % (user,node))
+    _nodes = ",".join(_nodes)
+
+    args = ['pdsh','-R','exce','-w' ,_nodes,'-f',str(len(nodes)),'ssh','%h','-oConnectTime=15',command]
 
 
-
-
+    return base_shell(args)
