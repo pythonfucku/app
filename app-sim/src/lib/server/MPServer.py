@@ -53,6 +53,8 @@ class mpServer:
             tmp = app(if_runForever,f,name,args)
             self._processList.append(tmp)
 
+        self.killed = 0
+
     def run(self):
         self.main()
 
@@ -138,7 +140,10 @@ class mpServer:
             os.kill(pid,signum)
 
     def wait_child_shutdown(self):
+        self.killed += 1
         for pid,process in self.children.items():
+            if self.killed >10:
+                os.kill(pid,9)
             logger.error("wait process[name:{0},pid:{1}] shutdown".format(process.name,pid))
             process.join()
             self.children.pop(pid)
@@ -154,7 +159,9 @@ class mpServer:
             logger.error("pp {0}".format(os.getpid()))
             for obj in self._processList:
                 if obj.pid == os.getpid():
-                    obj._runForever = False
+                    #obj._runForever = False
+                    os.kill(pid,9)
+
 
 
 
@@ -176,6 +183,13 @@ class app(mpServer):
         self.exitcode = 0
         pass
 
+    def exit(self,Message):
+        if(self.exitcode):
+            logger.error(Message)
+        else:
+            logger.warning(Message) 
+        sys.exit(self.exitcode)
+
     def run(self,*args):
         self.exitcode = 0
         self.set_signal()
@@ -189,11 +203,7 @@ class app(mpServer):
 
             Message = "APP process:[{0},pid:{1}] exit[{2}]".format(self.name,os.getpid(),self.exitcode)
 
-            if(self.exitcode):
-                logger.error(Message)
-            else:
-                logger.warning(Message) 
-            sys.exit(self.exitcode)
+            self.exit(Message)
 
         #except Exception as e:
             #if hasattr(exception,e.__class__.__name__):
@@ -210,10 +220,12 @@ class app(mpServer):
 
 
     def shutdown(self,signum,frame):
+        print "-"*100
         logger.error("APP process:[:{0},pid:{1}] get exit code:{2}".format(self.name,os.getpid(),signum))
         logger.error("waitting for func running over")
         self._runForever = False
         self.exitcode = signum
+        self.exit("APP process:[{0},pid:{1}] exit[{2}]".format(self.name,os.getpid(),self.exitcode))
 
     def set_signal(self):
         signal.signal(signal.SIGINT,self.shutdown)

@@ -124,6 +124,7 @@ def set_signal():
 def main():
     #set_signal()
     mp = None
+    exitcode = -1
     try:
         initApp()
         #判断是否转换到后台执行
@@ -149,11 +150,13 @@ def main():
         pass
 
     except Exception,e:
+        print "1111111111111111111111"
         logger.error(str(e))
         call_child_shutdown(0)
         sys.exit(1)
 
-    exitcode = mp.check_serve()
+    if mp:
+        exitcode = mp.check_serve()
     a = "System exit!"
     b = "-"*20 +" System running over "+"-"*20
     if not exitcode:
