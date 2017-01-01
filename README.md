@@ -36,7 +36,6 @@ CHANGE LOG：
                           asys.log.info("test,this log use system log file")
                 2.增加日志记录方式，原来只能使用a模式，现在增加w模块。（a，w模式类似file的打开模式）
                 3.调整了main函数的结构，优化了框架的结构
-        
         2016-10-26 10:31:14   
                 1.增加强制退出方式，连续5次CTRL+C，将使用kill -9 杀掉app
                 2.增加一个app：iostat，仅能获取本地的iostat，使用curses方式输出到屏幕
