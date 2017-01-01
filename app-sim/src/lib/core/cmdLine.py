@@ -7,8 +7,8 @@
 #       Author: Crow
 #        Email: lrt_no1@163.com
 #     HomePage: @_@"
-#      Version: 0.0.1
-#   LastChange: 2016-05-24 10:02:24
+#      Version: 2.0.1
+#   LastChange: 2017-01-01 17:25:04
 #      History:
 #=============================================================================
 '''
@@ -19,7 +19,7 @@ import sys
 from optparse import OptionParser
 #from optparse import SUPPRESS_HELP
 
-from lib.core.enum import SYS
+from lib.core.data import asys
 
 def cmdLineParser(argv=None):
 
@@ -50,12 +50,12 @@ def cmdLineParser(argv=None):
 
 
         if options.app:
-            SYS.APP = options.app
+            asys.RUN_APPS_NAME = options.app.split(',')
 
         if options.qiantai:
-            SYS.RUN_MODULE = 1
+            asys.RUN_MODULE = 1
         elif options.houtai:
-            SYS.RUN_MODULE  = 0
+            asys.RUN_MODULE  = 0
 
 
     except Exception,e:

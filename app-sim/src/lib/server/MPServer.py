@@ -22,7 +22,7 @@ import multiprocessing
 
 sys.path.append("../../")
 from lib.core.datatype import AttribDict
-from lib.core.data import logger
+from lib.core.data import asys
 from lib.core.exception import ServerException
 from lib.core import exception
 
@@ -42,7 +42,7 @@ class mpServer:
         self._pCount = len(funcList) 
         if not self._pCount:
             errMessage = "mp server args[funcList] is empty"
-            logger.error(errMessage)
+            asys.log.error(errMessage)
             raise ServerException(errMessage)
         self.children_exit_flag = False
 
@@ -69,14 +69,14 @@ class mpServer:
                 self.children[obj.pid] = w
             except Exception,e:
                 errMessage = "start process error:{0}".format(e)
-                logger.error(errMessage)
+                asys.log.error(errMessage)
                 raise ServerException(errMessage)
         
 
     def start_process(self,obj,*arg):
         w = Process(target=obj.run,args=obj.args,name=obj.name)
         w.start()
-        logger.info("APP process:[{0},pid:{1}],START! ".format(w.name,w.pid))
+        asys.log.info("APP process:[{0},pid:{1}],START! ".format(w.name,w.pid))
         return w
 
     def check_serve(self):
@@ -91,9 +91,9 @@ class mpServer:
                     returnCode += exitcode
                     Message = "APP process[{0},pid{1}],STOP.".format(obj.process.name,obj.process.pid)
                     if exitcode == 0:
-                        logger.warning(Message)
+                        asys.log.warning(Message)
                     elif exitcode == MYEXITCODE:
-                        logger.error(Message)
+                        asys.log.error(Message)
 
                     for pid,process in self.children.items():
                         if obj.process.pid == pid:
@@ -106,7 +106,7 @@ class mpServer:
                     returnCode += exitcode
                     for pid,process in self.children.items():
                         if obj.process.pid == pid:
-                            logger.error("process name:{0},pid:{1}] is down,need RESTART!".format(obj.name,obj.pid,))
+                            asys.log.error("process name:{0},pid:{1}] is down,need RESTART!".format(obj.name,obj.pid,))
 
                             self.children.pop(pid)
 
@@ -115,14 +115,14 @@ class mpServer:
                             obj.process = w
                             obj.pid = w.pid
                 else:
-                    #logger.info("process[name:{0},pid:{1}],running normal".format(obj.process.name,obj.process.pid))
+                    #asys.log.info("process[name:{0},pid:{1}],running normal".format(obj.process.name,obj.process.pid))
                     pass
 
             if not len(self.children):
                 self.children_exit_flag = True
             time.sleep(1)
 
-        #logger.warning("MPserver recv children exit singal,exited.")
+        #asys.log.warning("MPserver recv children exit singal,exited.")
         return returnCode
 
 
@@ -136,7 +136,7 @@ class mpServer:
     def call_child_shutdown(self,signum,frame):
         self.children_exit_flag = True
         for pid,process in self.children.items():
-            logger.error("call children process[name:{0},pid:{1}] exit[{2}]".format(process.name,pid,signum))
+            asys.log.error("call children process[name:{0},pid:{1}] exit[{2}]".format(process.name,pid,signum))
             os.kill(pid,signum)
 
     def wait_child_shutdown(self):
@@ -144,19 +144,19 @@ class mpServer:
         for pid,process in self.children.items():
             if self.killed >10:
                 os.kill(pid,9)
-            logger.error("wait process[name:{0},pid:{1}] shutdown".format(process.name,pid))
+            asys.log.error("wait process[name:{0},pid:{1}] shutdown".format(process.name,pid))
             process.join()
             self.children.pop(pid)
-            logger.error("main process[name:{0},pid:{1}] exit".format(process.name,pid))
+            asys.log.error("main process[name:{0},pid:{1}] exit".format(process.name,pid))
 
     def shutdown(self,signum,frame):
-        logger.error("process:{0} get exit code:{1}".format(self.myselfname,signum))
+        asys.log.error("process:{0} get exit code:{1}".format(self.myselfname,signum))
         if len(self.children):
             self.call_child_shutdown(signal.SIGUSR1,frame)
             self.wait_child_shutdown()
             sys.exit(signum)
         else:
-            logger.error("pp {0}".format(os.getpid()))
+            asys.log.error("pp {0}".format(os.getpid()))
             for obj in self._processList:
                 if obj.pid == os.getpid():
                     #obj._runForever = False
@@ -185,9 +185,9 @@ class app(mpServer):
 
     def exit(self,Message):
         if(self.exitcode):
-            logger.error(Message)
+            asys.log.error(Message)
         else:
-            logger.warning(Message) 
+            asys.log.warning(Message) 
         sys.exit(self.exitcode)
 
     def run(self,*args):
@@ -221,8 +221,8 @@ class app(mpServer):
 
     def shutdown(self,signum,frame):
         print "-"*100
-        logger.error("APP process:[:{0},pid:{1}] get exit code:{2}".format(self.name,os.getpid(),signum))
-        logger.error("waitting for func running over")
+        asys.log.error("APP process:[:{0},pid:{1}] get exit code:{2}".format(self.name,os.getpid(),signum))
+        asys.log.error("waitting for func running over")
         self._runForever = False
         self.exitcode = signum
         self.exit("APP process:[{0},pid:{1}] exit[{2}]".format(self.name,os.getpid(),self.exitcode))

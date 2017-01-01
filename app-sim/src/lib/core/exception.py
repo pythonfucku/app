@@ -3,7 +3,7 @@
 '''
 #=============================================================================
 #     FileName: exception.py
-#         Desc: “Ï≥£¿‡
+#         Desc:
 #       Author: Crow
 #        Email: lrt_no1@163.com
 #     HomePage: @_@"

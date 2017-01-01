@@ -3,12 +3,12 @@
 '''
 #=============================================================================
 #     FileName: common.py
-#         Desc: 公共方法库 
+#         Desc: 
 #       Author: Crow
 #        Email: lrt_no1@163.com
 #     HomePage: @_@"
-#      Version: 0.0.1
-#   LastChange: 2016-05-24 10:02:43
+#      Version: 2.0.1
+#   LastChange: 2017-01-01 17:25:44
 #      History:
 #=============================================================================
 '''
@@ -16,29 +16,28 @@ import os,fcntl,sys
 import subprocess
 import shutil
 
-from lib.core.exception import AppBaseException
-from lib.core.exception import ExceShellCommandException
-from lib.core.enum import SYS
-from lib.core.data import logger
-from lib.core.data import paths
-from lib.core.data import conf
+from lib.core.exception import ExceShellCommandException,AppBaseException
+from lib.core.data import asys
+from lib.core.log import mylog
 
-def setPaths():
-    paths.ROOT_PATH	=SYS.ROOT_PATH
-    paths.APP_PATH	= SYS.APP_PATH
-    paths.SYSTEM_LOG_PATH	= SYS.LOG_PATH
-    paths.SYSTEM_CONF_PATH	= SYS.CONF_PATH
+def set_app_log(logFileName):
+    mlog = mylog(logFileName)
+    return mlog.LOGGER
 
-    paths.SYSTEM_CONF	= SYS.CONF_FILE
+def log(app_name):
+    if len(app_name.split('.')) != 3:
+        raise AppBaseException("set app log error,app name format error")
 
-    for path in paths.values():
-        if any(path.endswith(_) for _ in (".txt",".conf",".xml",".zip")):
-            checkFile(path)
+    name = app_name.split('.')[1]
+    if not asys.APPS.has_key(name):
+        raise AppBaseException("No app named:{0},Can't get it's log".format(name)) 
+
+    return asys.APPS[name]["log"]
 
 def checkFile(filename):
     valid = True
 
-    if filename is None or not os.path.isfile(SYS.LOCK_FILE):
+    if filename is None or not os.path.isfile(asys.LOCK_FILE):
         valid = False
         if valid:
             try:
@@ -51,14 +50,14 @@ def checkFile(filename):
 
 pidfile = 0 
 def lockFile():
-    checkFile(SYS.LOCK_FILE)
+    checkFile(asys.LOCK_FILE)
 
     global pidfile
-    pidfile = open(SYS.LOCK_FILE ,"r")
+    pidfile = open(asys.LOCK_FILE ,"r")
 
     try:
         fcntl.flock(pidfile,fcntl.LOCK_EX| fcntl.LOCK_NB)
-        file(SYS.LOCK_FILE,"w+").write("%s\n" % os.getpid())
+        file(asys.LOCK_FILE,"w+").write("%s\n" % os.getpid())
     except Exception,e:
         print "Lock file error:{0}".format(str(e))
         print ("System is alread running...")
@@ -67,7 +66,7 @@ def lockFile():
 def detachProcess():
     lockFile()
 
-    if SYS.RUN_MODULE:
+    if asys.RUN_MODULE:
         return
 
     stdin = "/dev/null"
@@ -81,10 +80,10 @@ def detachProcess():
             sys.exit(0)
     except Exception,e:
         errMessage = "System detach daemon process error:{0}".format(str(e))
-        logger.error(errMessage)
+        asys.log.error(errMessage)
         sys.exit(1)
 
-    os.chdir(SYS.ROOT_PATH)
+    os.chdir(asys.ROOT_PATH)
     os.setsid()
     os.umask(0)
 
@@ -101,17 +100,17 @@ def detachProcess():
         os.dup2(se.fileno(), sys.stderr.fileno())  
 
     pid=str(os.getpid())
-    file(SYS.LOCK_FILE,'w+').write("%s\n" % pid)
+    file(asys.LOCK_FILE,'w+').write("%s\n" % pid)
 
-    logger.info("-"*20 +" System start running on backgrounder,pid:{0}".format(pid) +"-"*20) 
+    asys.log.info("-"*20 +" System start running on backgrounder,pid:{0}".format(pid) +"-"*20) 
 
 
 def print_exce_command(args):
-    logger.info("Exec command:{0}".format(args))
+    asys.log.info("Exec command:{0}".format(args))
 
 def print_err_exce_command(code,stderr):
-    logger.error("Exec command error,code:{0}".format(code))
-    logger.error("{0}".format(stderr))
+    asys.log.error("Exec command error,code:{0}".format(code))
+    asys.log.error("{0}".format(stderr))
 
 def base_shell(args):
     print_exce_command(args)

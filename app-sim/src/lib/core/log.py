@@ -3,22 +3,19 @@
 '''
 #=============================================================================
 #     FileName: log.py
-#         Desc: 日志系统
+#         Desc: 
 #       Author: Crow
 #        Email: lrt_no1@163.com
 #     HomePage: @_@"
 #      Version: 0.0.1
-#   LastChange: 2016-05-24 10:03:44
+#   LastChange: 2017-01-01 17:53:15
 #      History:
 #=============================================================================
 '''
-import sys
-import logging
-import ConfigParser
+import sys,logging,ConfigParser
 from logging.handlers import RotatingFileHandler
+from lib.core.data import asys
 
-from lib.core.enum import SYS
-from lib.core.cmdLine import cmdLineParser
 
 class ColorFormatter(logging.Formatter):
     def format(self, record):
@@ -27,62 +24,57 @@ class ColorFormatter(logging.Formatter):
         elif record.levelno == logging.ERROR:
             record.msg = '\033[91m%s\033[0m' % record.msg
         elif record.levelno == logging.DEBUG:
-            record.msg = '\033[92ms%s\033[0m' % record.msg
+            record.msg = '\033[92m%s\033[0m' % record.msg
 
         return logging.Formatter.format(self, record)
 
 
-try:
-    conf = ConfigParser.ConfigParser()
-    conf.read(SYS.CONF_FILE)
+class mylog:
+    def __init__(self,log_file_name):
+        try:
+            conf = ConfigParser.ConfigParser()
+            conf.read(asys.CONF_FILE)
 
-    LEVEL = int(conf.get("LOG","Level"))
-    TYPE = int(conf.get("LOG","Type"))
-    DATA_TYPE = conf.get("LOG","Date")
-    MAXBYTES = int(conf.get("LOG","MaxBytes"))
-    BACKUPCOUNT = int(conf.get("LOG","BackupCount"))
-    APP = (conf.get("APP","name"))
-except:
-    LEVEL = 0
-    TYPE = 0
-    DATA_TYPE = "%Y%m%d%H%M%S"
-    MAXBYTES = 104857600 * 5	#500M
-    BACKUPCOUNT = 5
+            LEVEL       = int(conf.get("LOG","Level"))
+            TYPE        = int(conf.get("LOG","Type"))
+            DATA_TYPE   = conf.get("LOG","Date")
+            MAXBYTES    = int(conf.get("LOG","MaxBytes"))
+            BACKUPCOUNT = int(conf.get("LOG","BackupCount"))
+            LOG_MODULE  = conf.get("LOG","Log module")
+        except:
+            LEVEL       = 0
+            TYPE        = 0
+            DATA_TYPE   = "%Y%m%d%H%M%S"
+            MAXBYTES    = 104857600 * 5	#500M
+            BACKUPCOUNT = 5
+            LOG_MODULE  = "w"
 
-#-------------------------------
-SYS.RUN_MODULE = TYPE
-SYS.APP = APP.split(',') 
-for tmp in SYS.APP:
-    if len(tmp.rstrip().lstrip()) == 0:
-        SYS.APP.remove(tmp)
-#判断是否为命令行提供启动参数
-cmdLineParser()
-#-------------------------------
+        if LOG_MODULE.upper() == "W":
+            MAXBYTES = 0
+            BACKUPCOUNT = 0
 
-log_format = "%(asctime)s,%(process)d,%(levelname)s > %(message)s"
-time_format = DATA_TYPE
-FORMAT = ColorFormatter(log_format,datefmt=time_format)
+        format_str = "%(asctime)s,%(process)d,%(levelname)s > %(message)s"
+        file_format = logging.Formatter(format_str,DATA_TYPE)
+        stdout_format = ColorFormatter(format_str,datefmt=DATA_TYPE)
+
+        LOGGER_HANDLER = RotatingFileHandler(
+            filename    = log_file_name,
+            maxBytes    = MAXBYTES,
+            backupCount = BACKUPCOUNT,
+            mode = LOG_MODULE,
+        )
+        LOGGER_HANDLER.setFormatter(file_format)
+        LOGGER_HANDLER.setLevel(LEVEL)
 
 
-#FORMAT = logging.Formatter("%(asctime)s,%(process)d,%(levelname)s > %(message)s",DATA_TYPE)
-LOG_NAME = SYS.LOG_FILE
+        self.LOGGER = logging.getLogger(log_file_name)
+        self.LOGGER.setLevel(LEVEL)
+        self.LOGGER.addHandler(LOGGER_HANDLER)
 
-LOGGER = logging.getLogger(LOG_NAME)
-LOGGER.setLevel(LEVEL)
-LOGGER_HANDLER = RotatingFileHandler(
-    filename        = LOG_NAME,
-    maxBytes        = MAXBYTES,
-    backupCount     = BACKUPCOUNT,
-    mode    ='a'
-)
-LOGGER_HANDLER.setFormatter(FORMAT)
-LOGGER_HANDLER.setLevel(LEVEL)
-LOGGER.addHandler(LOGGER_HANDLER)
-
-if SYS.RUN_MODULE >=1:
-    LOGGER_HANDLER = logging.StreamHandler(sys.stdout)
-    LOGGER_HANDLER.setFormatter(FORMAT)
-    LOGGER.addHandler(LOGGER_HANDLER)
+        if TYPE >=1:
+            LOGGER_HANDLER = logging.StreamHandler(sys.stdout)
+            LOGGER_HANDLER.setFormatter(stdout_format)
+            self.LOGGER.addHandler(LOGGER_HANDLER)
 
 
 

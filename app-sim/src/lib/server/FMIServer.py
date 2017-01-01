@@ -22,7 +22,7 @@ import threading
 
 import sys
 sys.path.append("../../")
-from lib.core.data import logger
+from lib.core.data import asys
 from lib.core.exception import TcpServerException
 from MPServer import mpServer
 
@@ -35,7 +35,7 @@ class Server(ForkingMixIn, TCPServer):
     def __init__(self, server_address, RequestHandlerClass,func):
         TCPServer.__init__(self,server_address,RequestHandlerClass,bind_and_activate=True)
         self.func = func
-        logger.info("FMIServer start listening...")
+        asys.log.info("FMIServer start listening...")
 
 class MyRequestHandler(StreamRequestHandler): 
 
@@ -48,14 +48,14 @@ class MyRequestHandler(StreamRequestHandler):
             RequestHandlerClass
             socket
         """
-        logger.info("FMIServer new client:{0},login".format(str(self.client_address)))
+        asys.log.info("FMIServer new client:{0},login".format(str(self.client_address)))
 
         while(1):
             try:
                 data = self.request.recv(self.rbufsize)
             except Exception,e:
                 errMessage = "FMIServer client:{0},recv message error:{1}".format(str(self.client_address),str(e))
-                logger.error(errMessage)
+                asys.log.error(errMessage)
                 #raise TcpServerException(errMessage)
                 return
 
@@ -64,7 +64,7 @@ class MyRequestHandler(StreamRequestHandler):
                 #raise TcpServerException(errMessage)
                 return
 
-            logger.debug("FMIServer recv:{0}".format(data))
+            asys.log.debug("FMIServer recv:{0}".format(data))
 
             #回调，socket原始数据，没有处理
             try:
@@ -77,15 +77,15 @@ class MyRequestHandler(StreamRequestHandler):
             try:
                 if send_msg:
                     self.request.send(send_msg)
-                    logger.debug("FMIServer send:{0}".format(send_msg))
+                    asys.log.debug("FMIServer send:{0}".format(send_msg))
             except Exception,e:
                 errMessage = "FMIServer running error:{0}".format(str(e))
-                logger.error(errMessage)
+                asys.log.error(errMessage)
                 #raise TcpServerException(errMessage)
                 return
 
     def finish(self):
-        logger.error("FMIServer client:{0} logout".format(str(self.client_address)))
+        asys.log.error("FMIServer client:{0} logout".format(str(self.client_address)))
         StreamRequestHandler.finish(self)
 
 class tcpServer():
@@ -123,7 +123,7 @@ class tcpServer():
 
 #--------------------------------------------------------------------------------
 def test(recv_msg):
-    logger.info("test:{0}".format(recv_msg))
+    asys.log.info("test:{0}".format(recv_msg))
     return "aaa"
 #--------------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ def test(recv_msg):
 a = tcpServer(1234,test)
 a.run()
 #while(1):
-    #logger.info("tcpServer start ,主函数继续干别的")
+    #asys.log.info("tcpServer start ,主函数继续干别的")
     #time.sleep(5)
 
 

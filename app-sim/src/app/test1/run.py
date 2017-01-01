@@ -14,21 +14,21 @@
 '''
 import time,signal,sys
 
-from lib.core.data import logger
+from lib.core.data import asys
 from lib.server.MPServer import mpServer
 
 def test1(j,a):
     i = 0
     for i in range(j):
         i += 1
-        logger.info("test33333 working:{0}".format(i)) 
+        asys.log.info("test33333 working:{0}".format(i)) 
         time.sleep(1)
 
 def test2(j,a):
     i = 0
     for i in range(j):
         i += 1
-        logger.info("test44444 working:{0}".format(i) )
+        asys.log.info("test44444 working:{0}".format(i) )
         time.sleep(1)
 
 if_runForever = False

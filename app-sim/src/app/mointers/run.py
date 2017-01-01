@@ -7,7 +7,7 @@ import threading
 import time
 import copy
 
-from lib.core.data import logger
+from lib.core.data import asys
 from lib.core.datatype import AttribDict
 
 import curses
@@ -60,7 +60,7 @@ class iostat():
 
             sp.kill()
         except Exception as e:
-            logger.error(str(e))
+            asys.log.error(str(e))
             
 
 
@@ -108,7 +108,7 @@ class iostat():
             info = "%11s%10s%10s%10s%10s%10s%10s" % (title,data[0],data[1],data[2],data[3],data[4],data[5])
             l1.addstr(y+3,x+1,info)
             title = "avg-cpu:"
-            #logger.info(info)
+            #asys.log.info(info)
 
 
             data = self.DeviceQueue.get()
@@ -116,7 +116,7 @@ class iostat():
 
             info = "%11s%12s%12s%12s%12s%12s" % (data[0],data[1],data[2],data[3],data[4],data[5])
             l1.addstr(y+6,x+1,info)
-            #logger.info(info)
+            #asys.log.info(info)
 
             l1.refresh()
             if type(count) == int:
